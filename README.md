@@ -12,3 +12,7 @@ You can read more from me on [codefx.org](http://codefx.org) and follow me [on T
 Jigsaw is to big to discuss here.
 Check out [on my blog](http://blog.codefx.org/tag/project-jigsaw/)
  or [this demo project](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar).
+
+# Language Changes
+
+* [private interface methods](private-interface-methods/PrivateInterfaceMethods.java)
