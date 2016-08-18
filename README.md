@@ -16,3 +16,4 @@ Check out [on my blog](http://blog.codefx.org/tag/project-jigsaw/)
 # Language Changes
 
 * [private interface methods](private-interface-methods/PrivateInterfaceMethods.java)
+* [`@SaveVarargs` on private non-final methods](private-safe-varargs/SafeVarargs.java)
