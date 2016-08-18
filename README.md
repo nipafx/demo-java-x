@@ -17,4 +17,5 @@ Check out [on my blog](http://blog.codefx.org/tag/project-jigsaw/)
 
 * [private interface methods](private-interface-methods/PrivateInterfaceMethods.java)
 * [try-with-resources on effectively final variables](try-with-resources/TryWithResources.java)
+* [diamond operator for anonymous classes](diamond-operator/DiamondOperator.java)
 * [`@SaveVarargs` on private non-final methods](private-safe-varargs/SafeVarargs.java)
