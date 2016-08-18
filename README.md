@@ -16,4 +16,5 @@ Check out [on my blog](http://blog.codefx.org/tag/project-jigsaw/)
 # Language Changes
 
 * [private interface methods](private-interface-methods/PrivateInterfaceMethods.java)
+* [try-with-resources on effectively final variables](try-with-resources/TryWithResources.java)
 * [`@SaveVarargs` on private non-final methods](private-safe-varargs/SafeVarargs.java)
