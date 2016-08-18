@@ -7,3 +7,8 @@ If you can't, check out the [JDK 9 page](http://openjdk.java.net/projects/jdk9/)
 You can read more from me on [codefx.org](http://codefx.org) and follow me [on Twitter](https://twitter.com/nipafx)
  (and [G+](https://plus.google.com/+NicolaiParlog) I guess).
 
+# Java Platform Module System
+
+Jigsaw is to big to discuss here.
+Check out [on my blog](http://blog.codefx.org/tag/project-jigsaw/)
+ or [this demo project](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar).
