@@ -1,8 +1,8 @@
 import java.util.stream.IntStream;
 
-public class PrivateInterfaceMethods {
+class PrivateInterfaceMethods {
 
-	public interface InJava8 {
+	interface InJava8 {
 
 		default boolean evenSum(int... numbers) {
 			return sum(numbers) % 2 == 0;
@@ -20,7 +20,7 @@ public class PrivateInterfaceMethods {
 
 	}
 
-	public interface InJava9 {
+	interface InJava9 {
 
 		default boolean evenSum(int... numbers) {
 			return sum(numbers) % 2 == 0;

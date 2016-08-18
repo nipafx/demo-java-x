@@ -1,8 +1,8 @@
 import java.util.Optional;
 
-public class SafeVarargs {
+class SafeVarargs {
 
-	public class InJava8 {
+	class InJava8 {
 
 		// @java.lang.SafeVarargs
 		// With the annotation, it would not compile
@@ -17,7 +17,7 @@ public class SafeVarargs {
 
 	}
 
-	public class InJava9 {
+	class InJava9 {
 
 		@java.lang.SafeVarargs
 		// here we go with Java 9
