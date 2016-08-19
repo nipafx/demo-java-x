@@ -20,3 +20,7 @@ Check out [on my blog](http://blog.codefx.org/tag/project-jigsaw/)
 * [diamond operator for anonymous classes](diamond-operator/DiamondOperator.java)
 * [`@SaveVarargs` on private non-final methods](private-safe-varargs/SafeVarargs.java)
 * [no warnings for deprecated imports](deprecated-imports/DeprecatedImports.java)
+
+# APIs
+
+* [OS processes](process/PipeProcessesAndAwaitCompletion.java)
