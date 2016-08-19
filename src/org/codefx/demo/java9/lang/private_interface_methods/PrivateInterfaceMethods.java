@@ -1,3 +1,5 @@
+package org.codefx.demo.java9.lang.private_interface_methods;
+
 import java.util.stream.IntStream;
 
 class PrivateInterfaceMethods {

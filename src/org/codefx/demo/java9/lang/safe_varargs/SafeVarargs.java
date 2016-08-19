@@ -1,3 +1,5 @@
+package org.codefx.demo.java9.lang.safe_varargs;
+
 import java.util.Optional;
 
 class SafeVarargs {

@@ -1,14 +1,15 @@
+package org.codefx.demo.java9.api.processes;
+
 import java.io.IOException;
 import java.lang.ProcessBuilder.Redirect;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CountDownLatch;
-import java.util.function.BiConsumer;
 
 import static java.util.Arrays.asList;
 
-public class PipeProcessesAndAwaitCompletion {
+class PipeProcessesAndAwaitCompletion {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		CountDownLatch latch = new CountDownLatch(2);

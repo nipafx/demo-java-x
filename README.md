@@ -15,13 +15,13 @@ Check out [my blog](http://blog.codefx.org/tag/project-jigsaw/)
 
 # Language Changes
 
-* [private interface methods](src/private-interface-methods/PrivateInterfaceMethods.java)
-* [try-with-resources on effectively final variables](src/try-with-resources/TryWithResources.java)
-* [diamond operator for anonymous classes](src/diamond-operator/DiamondOperator.java)
-* [`@SaveVarargs` on private non-final methods](src/safe-varargs/SafeVarargs.java)
-* [no warnings for deprecated imports](src/deprecated-imports/DeprecatedImports.java)
+* [private interface methods](src/org/codefx/demo/java9/lang/private_interface_methods/PrivateInterfaceMethods.java)
+* [try-with-resources on effectively final variables](src/org/codefx/demo/java9/lang/try_with_resources/TryWithResources.java)
+* [diamond operator for anonymous classes](src/org/codefx/demo/java9/lang/diamond_operator/DiamondOperator.java)
+* [`@SaveVarargs` on private non-final methods](src/org/codefx/demo/java9/lang/safe_varargs/SafeVarargs.java)
+* [no warnings for deprecated imports](src/org/codefx/demo/java9/lang/deprecated_imports/DeprecatedImports.java)
 
 # APIs
 
-* [OS processes](src/process/PipeProcessesAndAwaitCompletion.java)
-* [multi-resolution images](src/multi-resplution-images/Images.java)
+* [OS processes](src/org/codefx/demo/java9/api/processes/PipeProcessesAndAwaitCompletion.java)
+* [multi-resolution images](src/org/codefx/demo/java9/api/multi_resolution_images/Images.java)

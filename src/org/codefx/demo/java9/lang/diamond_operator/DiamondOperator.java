@@ -1,3 +1,5 @@
+package org.codefx.demo.java9.lang.diamond_operator;
+
 import java.util.Arrays;
 import java.util.List;
 

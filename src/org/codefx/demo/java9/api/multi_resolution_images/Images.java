@@ -1,3 +1,5 @@
+package org.codefx.demo.java9.api.multi_resolution_images;
+
 import javax.imageio.ImageIO;
 import java.awt.Image;
 import java.awt.image.BaseMultiResolutionImage;
@@ -8,9 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Images {
+class Images {
 
-	private static final String[] IMAGE_URLS = {
+	static final String[] IMAGE_URLS = {
 			"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Shibuya_Night_%28HDR%29.jpg/320px-Shibuya_Night_%28HDR%29.jpg",
 			"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Shibuya_Night_%28HDR%29.jpg/640px-Shibuya_Night_%28HDR%29.jpg",
 			"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Shibuya_Night_%28HDR%29.jpg/800px-Shibuya_Night_%28HDR%29.jpg",
