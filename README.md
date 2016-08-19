@@ -24,3 +24,4 @@ Check out [my blog](http://blog.codefx.org/tag/project-jigsaw/)
 # APIs
 
 * [OS processes](src/process/PipeProcessesAndAwaitCompletion.java)
+* [multi-resolution images](src/multi-resplution-images/Images.java)
