@@ -1,5 +1,11 @@
 package org.codefx.demo.java9.api.platform_logging.app;
 
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 
@@ -8,15 +14,23 @@ import java.lang.System.Logger.Level;
  * {@link java.lang.System.LoggerFinder}.
  * It uses {@link java.util.logging.Logger} to log some messages.
  */
-public class LoggingApplication {
+public class LoggingApplication extends Application {
+
+	private static Logger LOGGER = System.getLogger("Application");
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		LOGGER.log(Level.DEBUG, "Everything looks peachy");
+
+		primaryStage.setTitle("Hello World!");
+		primaryStage.setScene(new Scene(new StackPane(new Button("Hello World")), 300, 250));
+		primaryStage.show();
+
+		LOGGER.log(Level.INFO, "Hello, World!");
+	}
 
 	public static void main(String[] args) {
-		// my messages go through the SystemOut logger but the JVM's don't :(
-		Logger logger = System.getLogger("Application");
-		logger.log(Level.DEBUG, "Everything looks peachy");
-		logger.log(Level.INFO, "Hello, World!");
-		logger.log(Level.WARNING, "Causing an exception... ");
-		System.out.println(42 / 0);
+		launch(args);
 	}
 
 }

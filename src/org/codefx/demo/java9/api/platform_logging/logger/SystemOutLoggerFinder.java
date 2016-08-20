@@ -6,10 +6,6 @@ import java.lang.reflect.Module;
 
 public class SystemOutLoggerFinder extends LoggerFinder {
 
-	public SystemOutLoggerFinder() {
-		System.out.println("SystemOut logger finder instantiated...");
-	}
-
 	@Override
 	public Logger getLogger(String name, Module module) {
 		return new SystemOutLogger();
