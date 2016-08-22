@@ -1,7 +1,7 @@
 # Java 9 Feature Demo
 
 Demonstrates the features that will be available in Java 9.
-The links below take you to the demo in this project, the JEP respnsible for introducing the feature, and to other sources if available.
+The links below take you to the demo in this project, the JEP responsible for introducing the feature, and to other sources if available.
 
 Putting everything here will take a while, so you have to be patient.
 If you can't, check out the [JDK 9 page](http://openjdk.java.net/projects/jdk9/) and look through the JEPs.
@@ -10,7 +10,7 @@ You can read more from me on [codefx.org](http://codefx.org) and follow me [on T
 
 ## Java Platform Module System
 
-Jigsaw is to big to demo here.
+Jigsaw is too big to demo here.
 Check out [my blog](http://blog.codefx.org/tag/project-jigsaw/)
  or [this demo project](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar).
 
