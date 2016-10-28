@@ -32,3 +32,7 @@ Check out [my blog](http://blog.codefx.org/tag/project-jigsaw/)
 * [collection factory methods](src/org/codefx/demo/java9/api/collection_factory_methods) (instead of collection literals; [JEP 269](http://openjdk.java.net/jeps/269))
 * platform-specific desktop features (not supported by my OS so [my sample](src/org/codefx/demo/java9/api/desktop/DesktopFeatures.java) sucks; PRs welcome! [JEP 272](http://openjdk.java.net/jeps/272))
 * deserialization filter (targeted for JDK 9 but not yet implemented; [JEP 290](http://openjdk.java.net/jeps/290))
+
+## Internals
+
+* [new version string schema](src/org/codefx/demo/java9/internal/version/VersionStrings.java) ([JEP 223](http://openjdk.java.net/jeps/223))
