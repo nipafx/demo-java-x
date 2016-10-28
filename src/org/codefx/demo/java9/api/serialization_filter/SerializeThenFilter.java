@@ -15,7 +15,8 @@ public class SerializeThenFilter {
 		System.out.println("List to serialize: " + list);
 
 		byte[] serializedList = serialize(list);
-		LinkedListNode deserializedList = deserializeWithFilter(serializedList);
+		Object filter = createFilter();
+		LinkedListNode deserializedList = deserializeWithFilter(serializedList, filter);
 
 		System.out.println("Deserialized list: " + deserializedList);
 	}
@@ -26,9 +27,14 @@ public class SerializeThenFilter {
 		return byteArrayOutputStream.toByteArray();
 	}
 
-	// TODO: implement and add filter as soon as it is merged into JDK
+	private static Object createFilter() {
+		// TODO: create filter as soon as the feature is merged into JDK
+		return null;
+	}
+
 	private static LinkedListNode deserializeWithFilter(byte[] serializedList, Object filter) throws IOException, ClassNotFoundException {
 		ObjectInputStream inputStream = new ObjectInputStream(new ByteArrayInputStream(serializedList));
+		// TODO: add filter as soon as the feature is merged into JDK
 		// inputStream.setSerialFilter(filter);
 		return (LinkedListNode) inputStream.readObject();
 	}

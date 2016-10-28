@@ -5,15 +5,12 @@ import java.lang.ProcessBuilder.Redirect;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CountDownLatch;
 
 import static java.util.Arrays.asList;
 
 class PipeProcessesAndAwaitCompletion {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
-		CountDownLatch latch = new CountDownLatch(2);
-
 		ProcessBuilder ls = new ProcessBuilder()
 				.command("ls")
 				.directory(Paths.get("/home/nipa/tmp").toFile());

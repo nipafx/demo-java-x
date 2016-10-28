@@ -11,7 +11,7 @@ class PrivateInterfaceMethods {
 		}
 
 		default boolean oddSum(int... numbers) {
-			return sum(numbers) % 2 == 0;
+			return sum(numbers) % 2 == 1;
 		}
 
 		// we don't want this to be public;
@@ -29,7 +29,7 @@ class PrivateInterfaceMethods {
 		}
 
 		default boolean oddSum(int... numbers) {
-			return sum(numbers) % 2 == 0;
+			return sum(numbers) % 2 == 1;
 		}
 
 		// in Java 9 just make it private
