@@ -36,3 +36,4 @@ Check out [my blog](http://blog.codefx.org/tag/project-jigsaw/)
 ## Internals
 
 * [new version string schema](src/org/codefx/demo/java9/internal/version/VersionStrings.java) ([JEP 223](http://openjdk.java.net/jeps/223))
+* [UTF-8 property files](src/org/codefx/demo/java9/internal/resources/ResourceFileEncoding.java) ([JEP 226](http://openjdk.java.net/jeps/226))
