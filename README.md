@@ -3,6 +3,10 @@
 Demonstrates the features that will be available in Java 9.
 The links below take you to the demo in this project, the JEP responsible for introducing the feature, and to other sources if available.
 
+This article list a lot of the upcoming changes:
+
+* [The Ultimate Guide to Java 9](https://www.sitepoint.com/ultimate-guide-to-java-9/)
+
 Putting everything here will take a while, so you have to be patient.
 If you can't, check out the [JDK 9 page](http://openjdk.java.net/projects/jdk9/) and look through the JEPs.
 You can read more from me on [codefx.org](http://codefx.org) and follow me [on Twitter](https://twitter.com/nipafx)
@@ -35,6 +39,6 @@ Check out [my blog](http://blog.codefx.org/tag/project-jigsaw/)
 
 ## Internals
 
-* [new version string schema](src/org/codefx/demo/java9/internal/version/VersionStrings.java) ([JEP 223](http://openjdk.java.net/jeps/223))
+* [new version string schema](src/org/codefx/demo/java9/internal/version/VersionSchema.java) ([JEP 223](http://openjdk.java.net/jeps/223))
 * [UTF-8 property files](src/org/codefx/demo/java9/internal/resources/ResourceFileEncoding.java) ([JEP 226](http://openjdk.java.net/jeps/226))
 * [DRGB implementations for `SecureRandom`](src/org/codefx/demo/java9/internal/security/Drbg.java) ([JEP 273](http://openjdk.java.net/jeps/273))
