@@ -12,6 +12,15 @@ If you can't, check out the [JDK 9 page](http://openjdk.java.net/projects/jdk9/)
 You can read more from me on [codefx.org](http://codefx.org) and follow me [on Twitter](https://twitter.com/nipafx)
  (and even [G+](https://plus.google.com/+NicolaiParlog), I guess).
 
+## Setup
+
+The scripts are written for Linux but should look similar on other operating systems.
+They do three need symlinks, though:
+
+* `java9` links to `java` in the JDK 9 install
+* `javac9` links to `javac` in the JDK 9 install
+* `jar9` links to `jar` in the JDK 9 install
+
 ## Java Platform Module System
 
 Jigsaw is too big to demo here.
