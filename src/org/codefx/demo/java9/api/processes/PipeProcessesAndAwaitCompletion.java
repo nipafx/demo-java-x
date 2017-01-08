@@ -8,16 +8,18 @@ import java.util.concurrent.CompletableFuture;
 
 import static java.util.Arrays.asList;
 
-class PipeProcessesAndAwaitCompletion {
+public class PipeProcessesAndAwaitCompletion {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		ProcessBuilder ls = new ProcessBuilder()
-				.command("ls")
-				.directory(Paths.get("/home/nipa/tmp").toFile());
+				.command("tree", "-i")
+				.directory(Paths.get("/home/nipa").toFile());
 		ProcessBuilder grepPdf = new ProcessBuilder()
 				.command("grep", "pdf")
 				.redirectOutput(Redirect.INHERIT);
 		List<Process> lsThenGrep = ProcessBuilder.startPipeline(asList(ls, grepPdf));
+
+		System.out.println("Started processes...");
 
 		CompletableFuture[] lsThenGrepFutures = lsThenGrep.stream()
 				// onExit returns a CompletableFuture<Process>
