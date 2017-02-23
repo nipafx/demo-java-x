@@ -1,11 +1,40 @@
 package org.codefx.demo.java9.api.stack_walking;
 
 import java.lang.StackWalker.StackFrame;
+import java.util.Arrays;
 import java.util.stream.Stream;
 
 class StackWalking {
 
 	public static void main(String[] args) {
+		oldWay();
+		newWay();
+	}
+
+	static void oldWay() {
+		StackTraceElement[] stackTrace = createStackTrace();
+		String line = oldWalk(stackTrace);
+		System.out.println(line);
+	}
+
+	private static String oldWalk(StackTraceElement[] stackTrace) {
+		return Arrays.stream(stackTrace)
+				.peek(frame -> System.out.println(frame.getMethodName()))
+				.filter(frame -> frame.getMethodName().contains("oldWay"))
+				.findFirst()
+				.map(frame -> "Line " + frame.getLineNumber())
+				.orElse("Unknown line");
+	}
+
+	private static StackTraceElement[] createStackTrace() {
+		try {
+			throw new RuntimeException();
+		} catch (RuntimeException ex) {
+			return ex.getStackTrace();
+		}
+	}
+
+	static void newWay() {
 		one();
 	}
 
@@ -18,11 +47,11 @@ class StackWalking {
 	}
 
 	static void three() {
-		String line = StackWalker.getInstance().walk(StackWalking::walk);
+		String line = StackWalker.getInstance().walk(StackWalking::newWalk);
 		System.out.println(line);
 	}
 
-	private static String walk(Stream<StackFrame> stackFrameStream) {
+	private static String newWalk(Stream<StackFrame> stackFrameStream) {
 		return stackFrameStream
 				.filter(frame -> frame.getMethodName().contains("one"))
 				.findFirst()
