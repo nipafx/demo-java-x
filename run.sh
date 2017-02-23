@@ -6,6 +6,6 @@
 #	is needed to unlock stack frame reservation in `ReservingStackAreas`
 java9 \
 	-cp out \
-	--add-exports-private java.base/java.lang=ALL-UNNAMED \
+	--add-opens java.base/java.lang=ALL-UNNAMED \
 	-XX:-RestrictReservedStack \
 	$1
