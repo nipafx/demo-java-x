@@ -12,7 +12,7 @@ class StackWalking {
 	}
 
 	static void oldWay() {
-		StackTraceElement[] stackTrace = createStackTrace();
+		StackTraceElement[] stackTrace = new Throwable().getStackTrace();
 		String line = oldWalk(stackTrace);
 		System.out.println(line);
 	}
@@ -24,14 +24,6 @@ class StackWalking {
 				.findFirst()
 				.map(frame -> "Line " + frame.getLineNumber())
 				.orElse("Unknown line");
-	}
-
-	private static StackTraceElement[] createStackTrace() {
-		try {
-			throw new RuntimeException();
-		} catch (RuntimeException ex) {
-			return ex.getStackTrace();
-		}
 	}
 
 	static void newWay() {
