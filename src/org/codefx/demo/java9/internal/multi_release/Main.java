@@ -5,7 +5,7 @@ public class Main {
 	// see multi-release.sh in the project's root folder for how to run this example
 
 	public static void main(String[] args) {
-		System.out.println(new VersionDependent().version());
+		System.out.println(new VersionDependent8().version());
 	}
 
 }
