@@ -3,9 +3,9 @@
 # EXECUTE FROM PROJECT ROOT!
 
 echo " > creating clean directories"
-rm -r out/classes
+rm -rf out/classes
 mkdir -p out/classes
-rm -r out/mods
+rm -rf out/mods
 mkdir -p out/mods
 
 echo " > compiling and packaging logger"
@@ -31,8 +31,3 @@ jar9 \
 
 echo " > running App"
 java9 -verbose:gc -p out/mods -m org.codefx.demo.java9.app
-
-echo " > deleting directories"
-rm -r out/classes
-rm -r out/mods
-

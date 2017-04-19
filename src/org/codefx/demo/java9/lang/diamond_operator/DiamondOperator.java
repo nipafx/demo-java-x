@@ -14,7 +14,7 @@ class DiamondOperator {
 
 	}
 
-	class inJava {
+	class inJava9 {
 
 		<T> Box<T> createBox(T content) {
 			// Java 9 can infer `T` because it is a denotable type

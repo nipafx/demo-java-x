@@ -25,7 +25,7 @@ public class PipeProcessesAndAwaitCompletion {
 				// onExit returns a CompletableFuture<Process>
 				.map(Process::onExit)
 				.map(processFuture -> processFuture.thenAccept(
-						process -> System.out.println("Process " + process.getPid() + " finished.")))
+						process -> System.out.println("Process " + process.pid() + " finished.")))
 				.toArray(CompletableFuture[]::new);
 		// wait until all processes are finished
 		CompletableFuture
