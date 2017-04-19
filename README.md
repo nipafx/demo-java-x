@@ -38,6 +38,7 @@ Check out the [jigsaw](http://blog.codefx.org/tag/project-jigsaw/) and [jpms](ht
 
 ## APIs
 
+* [`Stream` improvements](src/org/codefx/demo/java9/api/stream) ([post on CodeFX](http://blog.codefx.org/java/dev/java-9-stream/))
 * [OS processes](src/org/codefx/demo/java9/api/processes/PipeProcessesAndAwaitCompletion.java) ([JEP 102](http://openjdk.java.net/jeps/102))
 * [multi-resolution images](src/org/codefx/demo/java9/api/multi_resolution_images/Images.java) ([JEP 251](http://openjdk.java.net/jeps/251))
 * [stack walking](src/org/codefx/demo/java9/api/stack_walking/StackWalking.java) ([JEP 259](http://openjdk.java.net/jeps/259), [post on SitePoint](https://www.sitepoint.com/deep-dive-into-java-9s-stack-walking-api/) including benchmarks)
