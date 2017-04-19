@@ -6,6 +6,8 @@ The links below take you to the demo in this project, the JEP responsible for in
 This article list a lot of the upcoming changes:
 
 * [The Ultimate Guide to Java 9](https://www.sitepoint.com/ultimate-guide-to-java-9/)
+* [Inside Java 9 – Version Schema, Multi-Release JARs, and More](https://www.sitepoint.com/inside-java-9-part-i/)
+* [Inside Java 9 – Performance, Compiler, and More](https://www.sitepoint.com/inside-java-9-part-ii/)
 
 Putting everything here will take a while, so you have to be patient.
 If you can't, check out the [JDK 9 page](http://openjdk.java.net/projects/jdk9/) and look through the JEPs.
@@ -15,7 +17,7 @@ You can read more from me on [codefx.org](http://codefx.org) and follow me [on T
 ## Setup
 
 The scripts are written for Linux but should look similar on other operating systems.
-They do three need symlinks, though:
+They do need three symlinks, though:
 
 * `java9` links to `java` in the JDK 9 install
 * `javac9` links to `javac` in the JDK 9 install
@@ -23,9 +25,8 @@ They do three need symlinks, though:
 
 ## Java Platform Module System
 
-Jigsaw is too big to demo here.
-Check out [my blog](http://blog.codefx.org/tag/project-jigsaw/)
- or [this demo project](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar).
+The module system is too big to demo here.
+Check out the [jigsaw](http://blog.codefx.org/tag/project-jigsaw/) and [jpms](http://blog.codefx.org/tag/jpms/) tags on my blog or [this demo project](https://github.com/CodeFX-org/demo-jigsaw-advent-calendar).
 
 ## Language Changes
 
@@ -39,7 +40,7 @@ Check out [my blog](http://blog.codefx.org/tag/project-jigsaw/)
 
 * [OS processes](src/org/codefx/demo/java9/api/processes/PipeProcessesAndAwaitCompletion.java) ([JEP 102](http://openjdk.java.net/jeps/102))
 * [multi-resolution images](src/org/codefx/demo/java9/api/multi_resolution_images/Images.java) ([JEP 251](http://openjdk.java.net/jeps/251))
-* [stack walking](src/org/codefx/demo/java9/api/stack_walking/StackWalking.java) ([JEP 259](http://openjdk.java.net/jeps/259))
+* [stack walking](src/org/codefx/demo/java9/api/stack_walking/StackWalking.java) ([JEP 259](http://openjdk.java.net/jeps/259), [post on SitePoint](https://www.sitepoint.com/deep-dive-into-java-9s-stack-walking-api/) including benchmarks)
 * [platform logging](src/org/codefx/demo/java9/api/platform_logging) ([JEP 264](http://openjdk.java.net/jeps/264))
 * [reactive streams](src/org/codefx/demo/java9/api/reactive_streams) ([JEP 266](http://openjdk.java.net/jeps/266))
 * [collection factory methods](src/org/codefx/demo/java9/api/collection_factory_methods) (instead of collection literals; [JEP 269](http://openjdk.java.net/jeps/269))
