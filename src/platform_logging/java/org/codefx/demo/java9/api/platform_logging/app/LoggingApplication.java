@@ -11,7 +11,7 @@ import java.lang.System.Logger.Level;
 
 /**
  * The application that is launched with a custom
- * {@link java.lang.System.LoggerFinder}.
+ * {@link System.LoggerFinder}.
  * It uses {@link java.util.logging.Logger} to log some messages.
  */
 public class LoggingApplication extends Application {

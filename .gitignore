@@ -2,5 +2,6 @@
 /.idea
 *.iml
 
-/out
-/out-mr
+# Maven
+
+/target

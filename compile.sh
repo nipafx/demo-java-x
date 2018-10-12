@@ -1,10 +1,10 @@
 #!/bin/bash
 
-rm -rf out/*
+rm -rf target/*
 # --add-exports java.base/jdk.internal.vm.annotation=ALL-UNNAMED
 # 	is needed to get access to `@ReservedStackAccess` in `ReservedStackAccess`
 javac9 \
 	--add-exports java.base/jdk.internal.vm.annotation=ALL-UNNAMED \
-	-d out src/org/codefx/demo/java9/**/**/*.java
+	-d target/classes `find src/main/java -name "*.java"`
 # copy resources needed for `ResourceFileEncoding`
-cp resources/** out
+cp resources/** target/classes

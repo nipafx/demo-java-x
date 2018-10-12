@@ -5,7 +5,7 @@
 # -XX:-RestrictReservedStack
 #	is needed to unlock stack frame reservation in `ReservingStackAreas`
 java9 \
-	-cp out \
+	-cp target/classes \
 	--add-opens java.base/java.lang=ALL-UNNAMED \
 	-XX:-RestrictReservedStack \
 	$1
