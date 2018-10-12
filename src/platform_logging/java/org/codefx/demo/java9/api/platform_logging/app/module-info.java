@@ -1,4 +1,4 @@
-module org.codefx.demo.java9.app {
+module org.codefx.demo.javaX.app {
 	requires java.logging;
 	requires javafx.base;
 	requires javafx.controls;

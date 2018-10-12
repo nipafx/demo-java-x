@@ -5,8 +5,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.codefx.demo</groupId>
-	<artifactId>java-9</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<artifactId>java-x</artifactId>
+	<version>9.0-SNAPSHOT</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
