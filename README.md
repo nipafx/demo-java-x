@@ -26,6 +26,10 @@ Check out the [jigsaw](http://blog.codefx.org/tag/project-jigsaw/) and [jpms](ht
 
 ## Language Changes
 
+* ⑩ [local-variable type inference with `var`](src/main/java/org/codefx/demo/java10/lang/var/VariableTypeInference.java) ([blog post](http://blog.codefx.org/java/java-10-var-type-inference/), [video](https://www.youtube.com/watch?v=Le1DbpRZdRQ), [JEP 286](http://openjdk.java.net/jeps/286))
+	* experiments with [intersection types](src/main/java/org/codefx/demo/java10/lang/var/IntersectionTypes.java) ([blog post](http://blog.codefx.org/java/intersection-types-var))
+	* experiments with ad-hoc [fields](src/main/java/org/codefx/demo/java10/lang/var/AdHocFields.java) and [methods](src/main/java/org/codefx/demo/java10/lang/var/AdHocMethods.java) ([blog post](http://blog.codefx.org/java/tricks-var-anonymous-classes/))
+	* experiments with [traits](src/main/java/org/codefx/demo/java10/lang/var/Traits.java) ([blog post](http://blog.codefx.org/java/traits-var))
 * ⑨ [private interface methods](src/main/java/org/codefx/demo/java9/lang/private_interface_methods/PrivateInterfaceMethods.java) ([JEP 213](http://openjdk.java.net/jeps/213))
 * ⑨ [try-with-resources on effectively final variables](src/main/java/org/codefx/demo/java9/lang/try_with_resources/TryWithResources.java) ([JEP 213](http://openjdk.java.net/jeps/213))
 * ⑨ [diamond operator for anonymous classes](src/main/java/org/codefx/demo/java9/lang/diamond_operator/DiamondOperator.java) ([JEP 213](http://openjdk.java.net/jeps/213))
