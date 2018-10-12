@@ -1,10 +1,12 @@
 # Java After Eight Feature Demo
 
-Demonstrates the features of Java 9 and 10.
+Demonstrates the features of Java 9, 10, and 11.
 The links below take you to the demos in this project, the JEPs responsible for introducing the feature, and to other sources if available.
 
 These articles list a lot of the new features:
 
+* [Java 11 Tutorial](https://winterbe.com/posts/2018/09/24/java-11-tutorial/)
+* [90 New Features (and APIs) in JDK 11](https://www.azul.com/90-new-features-and-apis-in-jdk-11/)
 * [Code-First Java 9 Tutorial](https://blog.codefx.org/java/java-9-tutorial/)
 * [The Ultimate Guide to Java 9](https://www.sitepoint.com/ultimate-guide-to-java-9/)
 * [Inside Java 9 – Version Schema, Multi-Release JARs, and More](https://www.sitepoint.com/inside-java-9-part-i/)
