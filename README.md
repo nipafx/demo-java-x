@@ -1,6 +1,6 @@
 # Java After Eight Feature Demo
 
-Demonstrates the features of Java 9.
+Demonstrates the features of Java 9 and 10.
 The links below take you to the demos in this project, the JEPs responsible for introducing the feature, and to other sources if available.
 
 These articles list a lot of the new features:

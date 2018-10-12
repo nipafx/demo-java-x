@@ -6,13 +6,21 @@
 
 	<groupId>org.codefx.demo</groupId>
 	<artifactId>java-x</artifactId>
-	<version>9.0-SNAPSHOT</version>
+	<version>10.0-SNAPSHOT</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>9</maven.compiler.source>
-		<maven.compiler.target>9</maven.compiler.target>
+		<maven.compiler.source>10</maven.compiler.source>
+		<maven.compiler.target>10</maven.compiler.target>
 	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>11</version>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>
@@ -29,7 +37,7 @@
 				<configuration>
 					<toolchains>
 						<jdk>
-							<version>9</version>
+							<version>10</version>
 							<vendor>Oracle</vendor>
 						</jdk>
 					</toolchains>
