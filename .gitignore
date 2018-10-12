@@ -5,3 +5,7 @@
 # Maven
 
 /target
+
+# Demos
+
+/app-cds

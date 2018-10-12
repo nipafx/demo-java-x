@@ -49,6 +49,7 @@ Check out the [jigsaw](http://blog.codefx.org/tag/project-jigsaw/) and [jpms](ht
 
 ## JVM & Tooling
 
+* ⑩ [application class-dara sharing](app-cds.sh) ([blog post](http://blog.codefx.org/java/application-class-data-sharing/), [JEP 310](http://openjdk.java.net/jeps/310))
 * ⑨ multi-release JARs: [classes](src/main/java/org/codefx/demo/java9/internal/multi_release) and [the script](multi-release.sh) ([JEP 238](http://openjdk.java.net/jeps/238))
 * ⑨ platform logging: [classes](src/platform_logging/java/org/codefx/demo/java9/api/platform_logging) and [the script](platform-logging.sh) ([JEP 264](http://openjdk.java.net/jeps/264))
 
