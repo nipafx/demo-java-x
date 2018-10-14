@@ -49,8 +49,11 @@
 				<configuration>
 					<!-- The flag "add-exports java.base/jdk.internal.vm.annotation=ALL-UNNAMED"
 							is needed to get access to `@ReservedStackAccess` in `ReservedStackAccess` -->
+					<!-- The flag "enable-preview" is needed for preview language features
+							like switch expressions in Java 12-->
 					<compilerArgs>
 						--add-exports=java.base/jdk.internal.vm.annotation=ALL-UNNAMED
+						--enable-preview
 					</compilerArgs>
 				</configuration>
 			</plugin>
