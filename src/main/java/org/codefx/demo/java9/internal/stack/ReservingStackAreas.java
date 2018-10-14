@@ -1,5 +1,9 @@
 package org.codefx.demo.java9.internal.stack;
 
+// this import may lead to errors in your IDE - two choices:
+//  - put the import and the two uses below in comments
+//  - configure your IDE to add the following compiler argument:
+//    --add-exports=java.base/jdk.internal.vm.annotation=ALL-UNNAMED
 import jdk.internal.vm.annotation.ReservedStackAccess;
 
 public class ReservingStackAreas {
