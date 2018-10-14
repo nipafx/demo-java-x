@@ -2,6 +2,8 @@
 set -e
 source executables.sh
 
+echo -e "\n# LAUNCHING $1\n"
+
 # --add-exports-private java.base/java.lang=ALL-UNNAMED
 # 	is needed for reflection over String internals in `Compaction`
 # -XX:-RestrictReservedStack

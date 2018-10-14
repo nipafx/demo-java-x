@@ -47,8 +47,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.0</version>
 				<configuration>
-					<!-- The flag add-exports java.base/jdk.internal.vm.annotation=ALL-UNNAMED
-						is needed to get access to `@ReservedStackAccess` in `ReservedStackAccess` -->
+					<!-- The flag "add-exports java.base/jdk.internal.vm.annotation=ALL-UNNAMED"
+							is needed to get access to `@ReservedStackAccess` in `ReservedStackAccess` -->
 					<compilerArgs>
 						--add-exports=java.base/jdk.internal.vm.annotation=ALL-UNNAMED
 					</compilerArgs>

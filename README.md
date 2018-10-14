@@ -22,10 +22,36 @@ You can read more from me on [codefx.org](http://codefx.org), watch me blab [on 
 
 ## Setup
 
+This project requires at least the most recent Java release, at times even early-access builds of upcoming versions.
+You can get OpenJDK builds for both from [jdk.java.net](http://jdk.java.net).
+
 Most of the project can be built with Maven.
-For some features, though, you need to run the `.sh` scripts in the root directory.
+It uses [toolchains](https://maven.apache.org/guides/mini/guide-using-toolchains.html) to configure which Java version Maven should use for compilation and packaging.
+Create/modify `toolchains.xml` in Maven's user folder (`~/.m2` on Linux) to contain a block like the following:
+
+```xml
+<!-- if the file already contains a <toolchains> tag,
+     you only need the inner <toolchain> block -->
+<toolchains>
+	<toolchain>
+		<type>jdk</type>
+		<provides>
+			<version>12</version>
+			<vendor>OpenJDK</vendor>
+		</provides>
+		<configuration>
+			<jdkHome>/opt/jdk-12</jdkHome>
+		</configuration>
+	</toolchain>
+</toolchains>
+```
+
+If your IDE doesn't like new syntax or APIs, you can always compile and run by hand - see `compile.sh`, `run.sh` (which expects the fully qualified name of the main class as argument) and `compile-run.sh` (conveniently combines the two - aso needs the main class).
 The scripts are written for Linux but should look similar on other operating systems.
 If the approprate Java verson is not on your path, configure it in `executables.sh`.
+
+For some features, you _have to_ run the `.sh` scripts in the root directory.
+If that's necessary, the feature list below mentions it.
 
 ## Java Platform Module System
 
