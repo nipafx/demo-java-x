@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 class Images {
 
@@ -20,7 +20,7 @@ class Images {
 
 	public static void main(String[] args) throws IOException {
 		MultiResolutionImage tokio = loadTokio();
-		int desiredImageWidth = new Random().nextInt(1500);
+		int desiredImageWidth = ThreadLocalRandom.current().nextInt(1500);
 		Image variant = tokio.getResolutionVariant(desiredImageWidth, 1);
 
 		System.out.printf("Width of image for %d: %d%n", desiredImageWidth, variant.getWidth(null));

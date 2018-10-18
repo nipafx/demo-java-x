@@ -1,9 +1,9 @@
 package org.codefx.demo.java9.api.reactive_streams;
 
-import java.util.Random;
 import java.util.concurrent.Flow.Publisher;
 import java.util.concurrent.Flow.Subscriber;
 import java.util.concurrent.Flow.Subscription;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.lang.Thread.currentThread;
@@ -16,7 +16,6 @@ public class LoggingRandomDelaySubscriber implements Subscriber<Object> {
 
 	// <name> [<thread name>]: <message>
 	private static final String LOG_MESSAGE_FORMAT = "%s [%s]: %s%n";
-	private static final Random RANDOM = new Random();
 
 	private final String name;
 
@@ -40,7 +39,7 @@ public class LoggingRandomDelaySubscriber implements Subscriber<Object> {
 	}
 
 	private void requestItems() {
-		int requestedItemCount = RANDOM.nextInt(6) + 5;
+		int requestedItemCount = ThreadLocalRandom.current().nextInt(6) + 5;
 		buffer.addAndGet(requestedItemCount);
 		log("Requesting %d new items...", requestedItemCount);
 		subscription.request(requestedItemCount);
@@ -61,7 +60,7 @@ public class LoggingRandomDelaySubscriber implements Subscriber<Object> {
 	}
 
 	private void requestMoreItemsOrCancelSubscription() {
-		if (RANDOM.nextBoolean())
+		if (ThreadLocalRandom.current().nextBoolean())
 			requestItems();
 		else
 			cancel();
@@ -84,9 +83,9 @@ public class LoggingRandomDelaySubscriber implements Subscriber<Object> {
 
 	public static void unsafeSleepRandomUpToMillis(int maxMillis) {
 		try {
-			Thread.sleep(RANDOM.nextInt(maxMillis) + 1);
+			Thread.sleep(ThreadLocalRandom.current().nextInt(maxMillis) + 1);
 		} catch (InterruptedException ex) {
-			// ignore
+			// don't do this in real code!
 		}
 	}
 

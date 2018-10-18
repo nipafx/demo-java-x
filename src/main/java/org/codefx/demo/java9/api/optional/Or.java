@@ -1,7 +1,7 @@
 package org.codefx.demo.java9.api.optional;
 
 import java.util.Optional;
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Stream;
 
 import static java.lang.Character.isDigit;
@@ -38,7 +38,7 @@ public class Or {
 	}
 
 	public static Optional<Customer> fromRemote(String id) {
-		return new Random().nextBoolean()
+		return ThreadLocalRandom.current().nextBoolean()
 				? Optional.of(new Customer(id))
 				: Optional.empty();
 	}

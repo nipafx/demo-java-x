@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.Serializable;
 import java.io.UncheckedIOException;
 import java.util.Arrays;
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Switch {
 
@@ -254,7 +254,7 @@ public class Switch {
 		TRUE, FALSE, FILE_NOT_FOUND;
 
 		static Bool random() {
-			return Bool.values()[new Random().nextInt(3)];
+			return Bool.values()[ThreadLocalRandom.current().nextInt(3)];
 		}
 
 	}

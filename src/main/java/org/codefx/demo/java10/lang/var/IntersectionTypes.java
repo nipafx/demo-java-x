@@ -4,8 +4,8 @@ import java.io.Closeable;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Optional;
-import java.util.Random;
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
@@ -13,7 +13,7 @@ import java.util.stream.StreamSupport;
 public class IntersectionTypes {
 
 	public static void main(String[] args) throws Exception {
-		boolean empty = new Random().nextBoolean();
+		boolean empty = ThreadLocalRandom.current().nextBoolean();
 		doItWithGenerics(empty);
 		doItWithVar(empty);
 	}
