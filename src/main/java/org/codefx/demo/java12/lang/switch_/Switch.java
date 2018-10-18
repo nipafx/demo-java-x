@@ -40,7 +40,7 @@ public class Switch {
 			case FILE_NOT_FOUND:
 				// intermediate variable for demo purposes; wait for it...
 				var ex = new UncheckedIOException(
-						"This is riciculous!",
+						"This is ridiculous!",
 						new FileNotFoundException());
 				throw ex;
 			default:
@@ -59,7 +59,7 @@ public class Switch {
 			case FALSE: return false;
 			case FILE_NOT_FOUND:
 				throw new UncheckedIOException(
-						"This is riciculous!",
+						"This is ridiculous!",
 						new FileNotFoundException());
 				// without default branch, the method wouldn't compile
 			default:
@@ -93,20 +93,20 @@ public class Switch {
 		System.out.println("---- BLOCKS ----");
 		boolean result = switch (Bool.random()) {
 			case TRUE -> {
-				System.out.println("[DEBUG] Bool true");
+				System.out.println("Bool true");
 				// return with `break`, not `return`
 				// (good decision, prevents confusion about whether `return`
 				// temrinates the switch expression or the entire method)
 				break true;
 			}
 			case FALSE -> {
-				System.out.println("[DEBUG] Bool false");
+				System.out.println("Bool false");
 				break false;
 			}
 			case FILE_NOT_FOUND -> {
 				// intermediate variable for demo purposes; wait for it...
 				var ex = new UncheckedIOException(
-						"This is riciculous!",
+						"This is ridiculous!",
 						new FileNotFoundException());
 				throw ex;
 			}
@@ -142,7 +142,7 @@ public class Switch {
 //			case FALSE -> System.out.println("false");
 			case FALSE -> false;
 			case FILE_NOT_FOUND -> throw new UncheckedIOException(
-					"This is riciculous!",
+					"This is ridiculous!",
 					new FileNotFoundException());
 			// we don't actually need a `default` branch because we've covered
 			// all three possible `Bool` values; the compiler slips one in for
@@ -226,7 +226,7 @@ public class Switch {
 			// fall-through prevented by `break`
 			//  blocks (and thus block scope) apply as well
 			case FILE_NOT_FOUND: {
-				String message = "This is riciculous!";
+				String message = "This is ridiculous!";
 				break message;
 			}
 			// compiler verifies exhaustiveness
