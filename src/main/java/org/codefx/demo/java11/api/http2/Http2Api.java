@@ -17,6 +17,10 @@ import static java.util.stream.Collectors.toList;
 /**
  * A simple demonstration of the HTTP/2 API, containing the snippets used in
  * <a hrewf="https://blog.codefx.org/java/http-2-api-tutorial/">this blog post</a>.
+ *
+ * See {@link org.codefx.demo.java11.api.http2.formalized.WikipediaSearch WikipediaSearch}
+ * for a more formalized implementation of the same logic and {@link ReactivePost}
+ * for how to request bodies are handled reactively.
  */
 public class Http2Api {
 
