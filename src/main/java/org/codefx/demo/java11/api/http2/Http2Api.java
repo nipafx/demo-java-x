@@ -8,10 +8,16 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Flow.Subscriber;
+import java.util.concurrent.Flow.Subscription;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
 
+/**
+ * A simple demonstration of the HTTP/2 API, containing the snippets used in
+ * <a hrewf="https://blog.codefx.org/java/http-2-api-tutorial/">this blog post</a>.
+ */
 public class Http2Api {
 
 	private static final HttpClient CLIENT = HttpClient.newBuilder().build();
@@ -34,12 +40,14 @@ public class Http2Api {
 	public static void main(String[] args) {
 		blockingSearch(CLIENT, URLS, SEARCH_TERM);
 		asyncSearch(CLIENT, URLS, SEARCH_TERM);
+		reactiveSearch(CLIENT, URLS, SEARCH_TERM);
 	}
 
 	public static void blockingSearch(HttpClient client, List<URI> urls, String term) {
+		System.out.println("---- BLOCKING ----");
 		urls.forEach(url -> {
 			boolean found = blockingSearch(client, url, term);
-			System.out.println("   [DEBUG] Completed " + url + " / found: " + found);
+			handleResult(url, found);
 		});
 	}
 
@@ -52,11 +60,21 @@ public class Http2Api {
 			HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
 			return response.body().contains(term);
 		} catch (IOException | InterruptedException ex) {
-			return false;
+			return handleError(ex);
 		}
 	}
 
+	private static void handleResult(URI url, Boolean found) {
+		System.out.println("   [DEBUG] Completed " + url + " / found: " + found);
+	}
+
+	private static boolean handleError(Throwable exception) {
+		System.out.println("   [ERROR] " + exception);
+		return false;
+	}
+
 	private static void asyncSearch(HttpClient client, List<URI> urls, String searchTerm) {
+		System.out.println("---- ASYNCHRONOUS ----");
 		CompletableFuture[] futures = urls.stream()
 				.map(url -> asyncSearch(client, url, searchTerm))
 				.toArray(CompletableFuture[]::new);
@@ -72,8 +90,75 @@ public class Http2Api {
 				.sendAsync(request, BodyHandlers.ofString())
 				.thenApply(HttpResponse::body)
 				.thenApply(body -> body.contains(term))
-				.thenAccept(found ->
-						System.out.println("   [DEBUG] Completed " + url + " / found: " + found));
+				.exceptionally(Http2Api::handleError)
+				.thenAccept(found -> handleResult(url, found));
+	}
+
+	private static void reactiveSearch(HttpClient client, List<URI> urls, String searchTerm) {
+		System.out.println("---- REACTIVE ----");
+		CompletableFuture[] futures = urls.stream()
+				.map(url -> reactiveSearch(client, url, searchTerm))
+				.toArray(CompletableFuture[]::new);
+		CompletableFuture.allOf(futures).join();
+	}
+
+	private static CompletableFuture<Void> reactiveSearch(HttpClient client, URI url, String term) {
+		HttpRequest request = HttpRequest.newBuilder()
+				.GET()
+				.uri(url)
+				.build();
+		StringFinder finder = new StringFinder(term);
+		client.sendAsync(request, BodyHandlers.fromLineSubscriber(finder))
+				.exceptionally(ex -> {
+					finder.onError(ex);
+					return null;
+				});
+		return finder
+				.found()
+				.exceptionally(Http2Api::handleError)
+				.thenAccept(found -> handleResult(url, found));
+	}
+
+	private static class StringFinder implements Subscriber<String> {
+
+		private final String term;
+		private final CompletableFuture<Boolean> found;
+		private Subscription subscription;
+
+		private StringFinder(String term) {
+			this.term = term;
+			this.found = new CompletableFuture<>();
+		}
+
+		@Override
+		public void onSubscribe(Subscription subscription) {
+			this.subscription = subscription;
+			this.subscription.request(1);
+		}
+
+		@Override
+		public void onNext(String line) {
+			if (line.contains(term))
+				found.complete(true);
+				// even if the term was found, streaming continues
+
+			subscription.request(1);
+		}
+
+		@Override
+		public void onError(Throwable ex) {
+			found.completeExceptionally(ex);
+		}
+
+		@Override
+		public void onComplete() {
+			found.complete(false);
+		}
+
+		public CompletableFuture<Boolean> found() {
+			return found;
+		}
+
 	}
 
 }
