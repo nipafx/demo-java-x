@@ -29,7 +29,7 @@ public class VariableTypeInference {
 
 	private static void simpleVarExample() throws IOException {
 		var codefx = new URL("http://codefx.org");
-		// connection eeds to be closed, but not in the demo
+		// connection needs to be closed but not in the demo
 		var connection = codefx.openConnection();
 		var reader = new BufferedReader(
 				new InputStreamReader(connection.getInputStream()));
@@ -129,7 +129,7 @@ public class VariableTypeInference {
 		// "reference the variable being initialized"
 		// TODO
 
-		// lambda variables
+		// lambda variables (works on Java 11+)
 //		Function<String, String> appendSpace = (var a) -> a + " ";
 	}
 

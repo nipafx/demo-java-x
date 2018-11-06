@@ -66,7 +66,7 @@ public class IntersectionTypes {
 
 		@Override
 		public E next() {
-			return null;
+			throw new IllegalStateException();
 		}
 	}
 
