@@ -60,7 +60,7 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 
 ## Language Changes
 
-* ⑫ [switch expressions](src/main/java/org/codefx/demo/java12/lang/switch_/Switch.java) ([video](https://www.youtube.com/watch?v=1znHEf3oSNI), [JEP 325](https://openjdk.java.net/jeps/325))
+* ⑫ [switch expressions](src/main/java/org/codefx/demo/java12/lang/switch_/Switch.java) ([article](https://blog.codefx.org/java/switch-expressions/), [video](https://www.youtube.com/watch?v=1znHEf3oSNI), [JEP 325](https://openjdk.java.net/jeps/325))
 * ⑩ [local-variable type inference with `var`](src/main/java/org/codefx/demo/java10/lang/var/VariableTypeInference.java) ([article](http://blog.codefx.org/java/java-10-var-type-inference/), [video](https://www.youtube.com/watch?v=Le1DbpRZdRQ), [JEP 286](http://openjdk.java.net/jeps/286))
 	* experiments with [intersection types](src/main/java/org/codefx/demo/java10/lang/var/IntersectionTypes.java) ([article](http://blog.codefx.org/java/intersection-types-var))
 	* experiments with ad-hoc [fields](src/main/java/org/codefx/demo/java10/lang/var/AdHocFields.java) and [methods](src/main/java/org/codefx/demo/java10/lang/var/AdHocMethods.java) ([article](http://blog.codefx.org/java/tricks-var-anonymous-classes/))

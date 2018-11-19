@@ -19,7 +19,8 @@ public class Switch {
 			Switch::voidExpression,
 			Switch::polyExpression,
 			Switch::moreTypes,
-			Switch::switchExpressionWithColon
+			Switch::switchExpressionWithColon,
+			Switch::returnFromWithin
 		);
 	}
 
@@ -95,8 +96,7 @@ public class Switch {
 			case TRUE -> {
 				System.out.println("Bool true");
 				// return with `break`, not `return`
-				// (good decision, prevents confusion about whether `return`
-				// temrinates the switch expression or the entire method)
+				// (good decision - aligns all options to leave `switch` branch)
 				break true;
 			}
 			case FALSE -> {
@@ -125,8 +125,8 @@ public class Switch {
 		String result = switch (Bool.random()) {
 			case TRUE, FALSE -> "sane";
 			// `default, case FILE_NOT_FOUND -> ...` does not work
-			// (neither does other way around)
-			case FILE_NOT_FOUND -> "insane";
+			// (neither does other way around), but that makes
+			// sense because using only `default` suffices
 			default -> "insane";
 		};
 
@@ -158,9 +158,9 @@ public class Switch {
 		var bool = Bool.TRUE;
 		switch (bool) {
 			case TRUE, FALSE -> System.out.println("Bool was sane");
-			// with the case statement, we would see "sane" and "insane"
+			// in colon form, we would see "sane" and "insane"
 			case FILE_NOT_FOUND -> System.out.println("Bool was insane");
-		};
+		}
 	}
 
 	private static void voidExpression() {
@@ -208,18 +208,31 @@ public class Switch {
 
 	private static void moreTypes() {
 		System.out.println("---- SWITCH OVER MORE TYPES ----");
-		double d = 2.2;
-		// this does not work yet, but it may in the future
+		int i = 0;
+		switch (i) {
+			case 0 -> System.out.println("Zero");
+			case 1 -> System.out.println("One");
+			default -> System.out.println("Other");
+		}
+
+		long l = 42;
+		double d = 42;
+		// these do not work yet, but they may in the future
+//		switch (l) {
+//			case 0 -> System.out.println("Zero");
+//			case 1 -> System.out.println("One");
+//			default -> System.out.println("Other");
+//		}
 //		switch (d) {
-//			case 0.0 -> System.out.println("sane");
-//			// with the case statement, we would see "sane" and "insane"
-//			default -> System.out.println("insane");
-//		};
+//			case 0.0 -> System.out.println("Zero");
+//			case 1.0 -> System.out.println("One");
+//			default -> System.out.println("Other");
+//		}
 	}
 
 	private static void switchExpressionWithColon() {
 		System.out.println("---- SWITCH EXPRESSION WITH COLON ----");
-		// the lambda syntax is optional; colon and break work just as well
+		// the arrow syntax is optional; colon and break work just as well
 		String result = switch (Bool.random()) {
 			// multiple case labels
 			case TRUE, FALSE: break "sane";
@@ -233,6 +246,29 @@ public class Switch {
 		};
 
 		System.out.println("Bool was: " + result);
+	}
+
+	private static String returnFromWithin() {
+		System.out.println("---- SWITCH STATEMENT THAT RETURNS ----");
+		// both forms (arrow and colon) allow to return from within the `switch`
+		// as long as it is used as a statement, not an expression
+
+		switch (Bool.random()) {
+			// `return` is only possible from block
+			case TRUE, FALSE -> { return "sane"; }
+			case FILE_NOT_FOUND -> {
+				return "This is ridiculous!";
+			}
+		}
+
+		switch (Bool.random()) {
+			case TRUE, FALSE: return "sane";
+			case FILE_NOT_FOUND: {
+				return "This is ridiculous!";
+			}
+		}
+
+		throw new IllegalStateException();
 	}
 
 	// HELPER
