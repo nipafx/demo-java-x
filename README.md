@@ -89,7 +89,7 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 * ⑪ [`Predicate` / `Pattern`](src/main/java/org/codefx/demo/java11/api/predicate) ([article](https://blog.codefx.org/java/java-11-gems/))
 * ⑪ [`Collection`](src/main/java/org/codefx/demo/java11/api/collection) ([article](https://blog.codefx.org/java/java-11-gems/))
 * ⑨⑪ `Optional` [in Java 9](src/main/java/org/codefx/demo/java9/api/optional) ([article](http://blog.codefx.org/java/dev/java-9-optional/)) and [Java 11](src/main/java/org/codefx/demo/java11/api/optional) ([article](https://blog.codefx.org/java/java-11-gems/))
-* ⑨ [`Stream`](src/main/java/org/codefx/demo/java9/api/stream) ([article](http://blog.codefx.org/java/dev/java-9-stream/))
+* ⑨⑫ `Stream` [in Java 9](src/main/java/org/codefx/demo/java9/api/stream) ([article](http://blog.codefx.org/java/dev/java-9-stream/)) and [Java 12](src/main/java/org/codefx/demo/java12/api/stream) ([article](https://blog.codefx.org/java/teeing-collector/))
 * ⑨ [OS processes](src/main/java/org/codefx/demo/java9/api/processes/PipeProcessesAndAwaitCompletion.java) ([JEP 102](http://openjdk.java.net/jeps/102))
 
 ## JVM & Tooling
