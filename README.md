@@ -91,6 +91,7 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 * ⑨⑪ `Optional` [in Java 9](src/main/java/org/codefx/demo/java9/api/optional) ([article](http://blog.codefx.org/java/dev/java-9-optional/)) and [Java 11](src/main/java/org/codefx/demo/java11/api/optional) ([article](https://blog.codefx.org/java/java-11-gems/))
 * ⑨⑫ `Stream` [in Java 9](src/main/java/org/codefx/demo/java9/api/stream) ([article](http://blog.codefx.org/java/dev/java-9-stream/)) and [Java 12](src/main/java/org/codefx/demo/java12/api/stream) ([article](https://blog.codefx.org/java/teeing-collector/))
 * ⑨ [OS processes](src/main/java/org/codefx/demo/java9/api/processes/PipeProcessesAndAwaitCompletion.java) ([JEP 102](http://openjdk.java.net/jeps/102))
+* ⑫ [`Files::mismatch`](src/main/java/org/codefx/demo/java12/api/files)
 
 ## JVM & Tooling
 
