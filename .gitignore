@@ -6,6 +6,11 @@
 
 /target
 
+#Gradle
+
+/.gradle
+/build
+
 # Demos
 
 /app-cds

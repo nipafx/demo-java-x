@@ -1,0 +1,20 @@
+plugins {
+	id 'java'
+}
+
+sourceCompatibility = 12
+targetCompatibility = 12
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// for writing tests "testCompile" would suffice, but extensions are
+	// defined in the project's "main" folder, so we need "compile"
+	compile "org.openjfx:javafx-controls:11"
+}
+
+compileJava {
+	options.compilerArgs += ["--enable-preview"]
+}
