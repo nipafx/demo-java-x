@@ -74,7 +74,8 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 ## New APIs
 
 * ⑪ HTTP/2 client: [simple](src/main/java/org/codefx/demo/java11/api/http2/Http2Api.java), [more formal](src/main/java/org/codefx/demo/java11/api/http2/formalized) ([tutorial](https://blog.codefx.org/java/http-2-api-tutorial/), [reactive request/response bodies](https://blog.codefx.org/java/reactive-http-2-requests-responses/))
-* ⑨⑩ version API, [introduced in Java 9](src/main/java/org/codefx/demo/java9/api/version/VersionApi.java), [updated in Java 10](src/main/java/org/codefx/demo/java10/api/version/VersionApi.java)
+* ⑩⑨ version API, [introduced in Java 9](src/main/java/org/codefx/demo/java9/api/version/VersionApi.java),
+  [updated in Java 10](src/main/java/org/codefx/demo/java10/api/version/VersionApi.java)
 * ⑨ [collection factory methods](src/main/java/org/codefx/demo/java9/api/collection_factory_methods) (instead of collection literals; [JEP 269](http://openjdk.java.net/jeps/269))
 * ⑨ [reactive streams](src/main/java/org/codefx/demo/java9/api/reactive_streams) ([JEP 266](http://openjdk.java.net/jeps/266))
 * ⑨ [stack walking](src/main/java/org/codefx/demo/java9/api/stack_walking/StackWalking.java) ([JEP 259](http://openjdk.java.net/jeps/259), [post on SitePoint](https://www.sitepoint.com/deep-dive-into-java-9s-stack-walking-api/) including benchmarks)
@@ -84,16 +85,25 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 
 ## Updated APIs
 
-* ⑫ [formating numbers](src/main/java/org/codefx/demo/java12/api/format)
-* ⑪⑫ `String` [in Java 11](src/main/java/org/codefx/demo/java11/api/string) ([article](https://blog.codefx.org/java/java-11-gems/)) and [Java 12](src/main/java/org/codefx/demo/java12/api/string)
-* ⑪ [I/O](src/main/java/org/codefx/demo/java11/api/io) ([article](https://blog.codefx.org/java/java-11-gems/))
-* ⑪ [`Predicate` / `Pattern`](src/main/java/org/codefx/demo/java11/api/predicate) ([article](https://blog.codefx.org/java/java-11-gems/))
-* ⑪ [`Collection`](src/main/java/org/codefx/demo/java11/api/collection) ([article](https://blog.codefx.org/java/java-11-gems/))
-* ⑨⑪ `Optional` [in Java 9](src/main/java/org/codefx/demo/java9/api/optional) ([article](http://blog.codefx.org/java/dev/java-9-optional/)) and [Java 11](src/main/java/org/codefx/demo/java11/api/optional) ([article](https://blog.codefx.org/java/java-11-gems/))
-* ⑨⑫ `Stream` [in Java 9](src/main/java/org/codefx/demo/java9/api/stream) ([article](http://blog.codefx.org/java/dev/java-9-stream/)) and [Java 12](src/main/java/org/codefx/demo/java12/api/stream) ([article](https://blog.codefx.org/java/teeing-collector/))
+* ⑫⑪ `String` [in Java 12](src/main/java/org/codefx/demo/java12/api/string)
+  and [in Java 11](src/main/java/org/codefx/demo/java11/api/string)
+* ⑫⑨ `Stream` [in Java 12](src/main/java/org/codefx/demo/java12/api/stream/TeeingCollector.java) ([article](https://blog.codefx.org/java/teeing-collector/))
+  and [in Java 9](src/main/java/org/codefx/demo/java9/api/stream) ([article](http://blog.codefx.org/java/dev/java-9-stream/))
+* ⑫ [formating numbers](src/main/java/org/codefx/demo/java12/api/format/CompactFormat.java)
+* ⑫ [`Files::mismatch`](src/main/java/org/codefx/demo/java12/api/files/FilesMismatch.java)
+* ⑫ [error recovery with `CompletableFuture`](src/main/java/org/codefx/demo/java12/api/future/Recovery.java)
+* ⑪ [I/O](src/main/java/org/codefx/demo/java11/api/io)
+* ⑪ [`Predicate` / `Pattern`](src/main/java/org/codefx/demo/java11/api/predicate)
+* ⑪ [`Collection`](src/main/java/org/codefx/demo/java11/api/collection/ToArray.java)
+* ⑪⑨ `Optional` [in Java 11](src/main/java/org/codefx/demo/java11/api/optional/IsEmpty.java)
+  and [in Java 9](src/main/java/org/codefx/demo/java9/api/optional/Or.java) ([article](http://blog.codefx.org/java/dev/java-9-optional/))
 * ⑨ [OS processes](src/main/java/org/codefx/demo/java9/api/processes/PipeProcessesAndAwaitCompletion.java) ([JEP 102](http://openjdk.java.net/jeps/102))
-* ⑫ [`Files::mismatch`](src/main/java/org/codefx/demo/java12/api/files)
-* ⑫ [error recovery with `CompletableFuture`](src/main/java/org/codefx/demo/java12/api/future)
+
+Some of the small changes have their own articles (in which case they are linked), but many don't.
+Most are show-cased in these posts, though:
+
+* [Definitive Guide To Java 12](https://blog.codefx.org/java/java-11-guide/)
+* [Eleven Hidden Gems In Java 11](https://blog.codefx.org/java/java-11-gems/)
 
 ## JVM & Tooling
 
