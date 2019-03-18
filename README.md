@@ -85,7 +85,7 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 ## Updated APIs
 
 * ⑫ [formating numbers](src/main/java/org/codefx/demo/java12/api/format)
-* ⑪ [`String`](src/main/java/org/codefx/demo/java11/api/string) ([article](https://blog.codefx.org/java/java-11-gems/))
+* ⑪⑫ `String` [in Java 11](src/main/java/org/codefx/demo/java11/api/string) ([article](https://blog.codefx.org/java/java-11-gems/)) and [Java 12](src/main/java/org/codefx/demo/java12/api/string)
 * ⑪ [I/O](src/main/java/org/codefx/demo/java11/api/io) ([article](https://blog.codefx.org/java/java-11-gems/))
 * ⑪ [`Predicate` / `Pattern`](src/main/java/org/codefx/demo/java11/api/predicate) ([article](https://blog.codefx.org/java/java-11-gems/))
 * ⑪ [`Collection`](src/main/java/org/codefx/demo/java11/api/collection) ([article](https://blog.codefx.org/java/java-11-gems/))
