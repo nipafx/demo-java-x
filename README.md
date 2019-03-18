@@ -102,7 +102,7 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 Some of the small changes have their own articles (in which case they are linked), but many don't.
 Most are show-cased in these posts, though:
 
-* [Definitive Guide To Java 12](https://blog.codefx.org/java/java-11-guide/)
+* [Definitive Guide To Java 12](https://blog.codefx.org/java/java-12-guide/)
 * [Eleven Hidden Gems In Java 11](https://blog.codefx.org/java/java-11-gems/)
 
 ## JVM & Tooling
