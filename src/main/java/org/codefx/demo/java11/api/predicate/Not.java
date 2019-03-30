@@ -1,6 +1,5 @@
 package org.codefx.demo.java11.api.predicate;
 
-import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 

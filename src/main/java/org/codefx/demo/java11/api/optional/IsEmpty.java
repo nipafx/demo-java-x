@@ -1,6 +1,5 @@
 package org.codefx.demo.java11.api.optional;
 
-import java.util.OptionalInt;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicLong;
 

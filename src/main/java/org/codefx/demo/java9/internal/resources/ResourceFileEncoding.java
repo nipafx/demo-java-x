@@ -3,10 +3,8 @@ package org.codefx.demo.java9.internal.resources;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Enumeration;
 import java.util.Properties;
 import java.util.PropertyResourceBundle;
-import java.util.stream.StreamSupport;
 
 public class ResourceFileEncoding {
 
