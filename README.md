@@ -64,6 +64,7 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 
 ## Language Changes
 
+* ⑬ [text blocks](src/main/java/org/codefx/demo/java13/lang/text_blocks/TextBlocks.java) ([article](https://blog.codefx.org/java/text-blocks))
 * ⑫ [switch expressions](src/main/java/org/codefx/demo/java12/lang/switch_/Switch.java) ([article](https://blog.codefx.org/java/switch-expressions/), [video](https://www.youtube.com/watch?v=1znHEf3oSNI), [JEP 325](https://openjdk.java.net/jeps/325))
 * ⑩ [local-variable type inference with `var`](src/main/java/org/codefx/demo/java10/lang/var/VariableTypeInference.java) ([article](http://blog.codefx.org/java/java-10-var-type-inference/), [video](https://www.youtube.com/watch?v=Le1DbpRZdRQ), [JEP 286](http://openjdk.java.net/jeps/286))
 	* experiments with [intersection types](src/main/java/org/codefx/demo/java10/lang/var/IntersectionTypes.java) ([article](http://blog.codefx.org/java/intersection-types-var))
