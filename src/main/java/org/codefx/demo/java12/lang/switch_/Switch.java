@@ -97,11 +97,11 @@ public class Switch {
 				System.out.println("Bool true");
 				// return with `break`, not `return`
 				// (good decision - aligns all options to leave `switch` branch)
-				break true;
+				yield true;
 			}
 			case FALSE -> {
 				System.out.println("Bool false");
-				break false;
+				yield false;
 			}
 			case FILE_NOT_FOUND -> {
 				// intermediate variable for demo purposes; wait for it...
@@ -235,12 +235,12 @@ public class Switch {
 		// the arrow syntax is optional; colon and break work just as well
 		String result = switch (Bool.random()) {
 			// multiple case labels
-			case TRUE, FALSE: break "sane";
+			case TRUE, FALSE: yield "sane";
 			// fall-through prevented by `break`
 			//  blocks (and thus block scope) apply as well
 			case FILE_NOT_FOUND: {
 				String message = "This is ridiculous!";
-				break message;
+				yield message;
 			}
 			// compiler verifies exhaustiveness
 		};

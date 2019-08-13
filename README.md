@@ -40,11 +40,11 @@ Create/modify `toolchains.xml` in Maven's user folder (`~/.m2/` on Linux) to con
 	<toolchain>
 		<type>jdk</type>
 		<provides>
-			<version>12</version>
+			<version>13</version>
 			<vendor>OpenJDK</vendor>
 		</provides>
 		<configuration>
-			<jdkHome>/opt/jdk-12</jdkHome>
+			<jdkHome>/opt/jdk/13</jdkHome>
 		</configuration>
 	</toolchain>
 </toolchains>
