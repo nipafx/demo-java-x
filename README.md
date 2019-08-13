@@ -1,9 +1,13 @@
 # Java After Eight Feature Demo
 
-Demonstrates the features of Java 9, 10, and 11.
+Demonstrates most features that were introduced by Java 9 and later versions.
 The links below take you to the demos in this project, the JEPs responsible for introducing the feature, and to other sources if available.
 
 These articles discuss the recent Java versions and list a lot of the new features:
+
+**Java 12:**
+
+* [Definitive Guide To Java 12](https://blog.codefx.org/java/java-12-guide/)
 
 **Java 11:**
 
@@ -27,7 +31,7 @@ You can get OpenJDK builds for both from [jdk.java.net](http://jdk.java.net).
 
 Most of the project can be built with Maven.
 It uses [toolchains](https://maven.apache.org/guides/mini/guide-using-toolchains.html) to configure which Java version Maven should use for compilation and packaging.
-Create/modify `toolchains.xml` in Maven's user folder (`~/.m2` on Linux) to contain a block like the following:
+Create/modify `toolchains.xml` in Maven's user folder (`~/.m2/` on Linux) to contain a block like the following:
 
 ```xml
 <!-- if the file already contains a <toolchains> tag,
@@ -46,7 +50,7 @@ Create/modify `toolchains.xml` in Maven's user folder (`~/.m2` on Linux) to cont
 </toolchains>
 ```
 
-If your IDE doesn't like new syntax or APIs, you can always compile and run by hand - see `compile.sh`, `run.sh` (which expects the fully qualified name of the main class as argument) and `compile-run.sh` (conveniently combines the two - aso needs the main class).
+If your IDE doesn't like new syntax or APIs, you can always compile and run by hand - see `compile.sh`, `run.sh` (which expects the fully qualified name of the main class as argument) and `compile-run.sh` (conveniently combines the two - also needs the main class).
 The scripts are written for Linux but should look similar on other operating systems.
 If the approprate Java verson is not on your path, configure it in `executables.sh`.
 
