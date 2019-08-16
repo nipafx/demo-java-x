@@ -15,6 +15,7 @@ printf "\n--- RUN WITHOUT CDS ---\n\n"
 time $java --enable-preview \
 	-jar target/java-x.jar
 
+
 # Since Java 12, the JDK comes with an archive of the JDK classes
 # and so it makes no sense to create a new one
 #printf "\n--- RUN WITH CDS ---\n"
@@ -27,6 +28,7 @@ time $java --enable-preview \
 #	-Xlog:class+load \
 #	-jar target/java-x.jar \
 #| grep -v "shared objects file"
+
 
 printf "\n--- RUN WITH APPLICATION CDS ---\n"
 printf "\n > record used classes\n"
@@ -49,6 +51,25 @@ time $java --enable-preview \
 printf "\n > non-archived classes\n"
 $java --enable-preview \
 	-XX:SharedArchiveFile=app-cds/app.jsa \
+	-Xlog:class+load \
+	-jar target/java-x.jar \
+| grep -v "shared objects file"
+
+
+printf "\n--- RUN WITH DYNAMIC APP CDS ---\n"
+printf "\n > run without CDS & create archive\n"
+time $java --enable-preview \
+	-XX:ArchiveClassesAtExit=app-cds/dyn.jsa \
+	-jar target/java-x.jar
+
+printf "\n > use created archive\n"
+time $java --enable-preview \
+	-XX:SharedArchiveFile=app-cds/dyn.jsa \
+	-jar target/java-x.jar
+
+printf "\n > non-archived classes\n"
+$java --enable-preview \
+	-XX:SharedArchiveFile=app-cds/dyn.jsa \
 	-Xlog:class+load \
 	-jar target/java-x.jar \
 | grep -v "shared objects file"
