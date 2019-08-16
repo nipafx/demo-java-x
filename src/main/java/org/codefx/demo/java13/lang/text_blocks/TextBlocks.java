@@ -13,7 +13,7 @@ public class TextBlocks {
 		closingNewlines();
 		stripIndent();
 
-		indentity();
+		identity();
 		nested();
 		translateEscapes();
 		noInterpolation();
@@ -93,7 +93,7 @@ public class TextBlocks {
 		System.out.println("----");
 	}
 
-	private static void indentity() {
+	private static void identity() {
 		String hello = """
 				Hello, "text blocks"!
 				""";
