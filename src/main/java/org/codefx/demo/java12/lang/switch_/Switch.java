@@ -95,7 +95,7 @@ public class Switch {
 		boolean result = switch (Bool.random()) {
 			case TRUE -> {
 				System.out.println("Bool true");
-				// return with `break`, not `return`
+				// return with `yield`, not `return`
 				// (good decision - aligns all options to leave `switch` branch)
 				yield true;
 			}
@@ -232,11 +232,11 @@ public class Switch {
 
 	private static void switchExpressionWithColon() {
 		System.out.println("---- SWITCH EXPRESSION WITH COLON ----");
-		// the arrow syntax is optional; colon and break work just as well
+		// the arrow syntax is optional; colon and `yield` work just as well
 		String result = switch (Bool.random()) {
 			// multiple case labels
 			case TRUE, FALSE: yield "sane";
-			// fall-through prevented by `break`
+			// fall-through prevented by `yield`
 			//  blocks (and thus block scope) apply as well
 			case FILE_NOT_FOUND: {
 				String message = "This is ridiculous!";
