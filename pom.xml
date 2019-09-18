@@ -6,7 +6,7 @@
 
 	<groupId>org.codefx.demo</groupId>
 	<artifactId>java-x</artifactId>
-	<version>12.0-SNAPSHOT</version>
+	<version>13.0-SNAPSHOT</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -95,7 +95,7 @@
 					</execution>
 				</executions>
 			</plugin>
-    </plugins>
+		</plugins>
 	</build>
 
 </project>
