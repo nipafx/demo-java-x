@@ -5,9 +5,15 @@ The links below take you to the demos in this project, the JEPs responsible for 
 
 These articles discuss the recent Java versions and list a lot of the new features:
 
+**Java 13:**
+
+* [Definitive Guide To Java 13](http://blog.codefx.org/java/java-13-guide/)
+* [81 New Features and APIs in JDK 13](https://www.azul.com/jdk-13-81-new-features-and-apis/)
+
 **Java 12:**
 
 * [Definitive Guide To Java 12](https://blog.codefx.org/java/java-12-guide/)
+* [39 New Features (and APIs) in JDK 12](https://www.azul.com/39-new-features-and-apis-in-jdk-12/)
 
 **Java 11:**
 
@@ -65,7 +71,7 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 ## Language Changes
 
 * ⑬ [text blocks](src/main/java/org/codefx/demo/java13/lang/text_blocks/TextBlocks.java) ([article](https://blog.codefx.org/java/text-blocks))
-* ⑫ [switch expressions](src/main/java/org/codefx/demo/java12/lang/switch_/Switch.java) ([article](https://blog.codefx.org/java/switch-expressions/), [video](https://www.youtube.com/watch?v=1znHEf3oSNI), [JEP 325](https://openjdk.java.net/jeps/325))
+* ⑬⑫ [switch expressions](src/main/java/org/codefx/demo/java12/lang/switch_/Switch.java) ([article](https://blog.codefx.org/java/switch-expressions/), [video](https://www.youtube.com/watch?v=1znHEf3oSNI), [JEP 325](https://openjdk.java.net/jeps/325), [JEP 354](https://openjdk.java.net/jeps/354))
 * ⑩ [local-variable type inference with `var`](src/main/java/org/codefx/demo/java10/lang/var/VariableTypeInference.java) ([article](http://blog.codefx.org/java/java-10-var-type-inference/), [video](https://www.youtube.com/watch?v=Le1DbpRZdRQ), [JEP 286](http://openjdk.java.net/jeps/286))
 	* experiments with [intersection types](src/main/java/org/codefx/demo/java10/lang/var/IntersectionTypes.java) ([article](http://blog.codefx.org/java/intersection-types-var))
 	* experiments with ad-hoc [fields](src/main/java/org/codefx/demo/java10/lang/var/AdHocFields.java) and [methods](src/main/java/org/codefx/demo/java10/lang/var/AdHocMethods.java) ([article](http://blog.codefx.org/java/tricks-var-anonymous-classes/))
@@ -112,9 +118,8 @@ Most are show-cased in these posts, though:
 
 ## JVM & Tooling
 
-* ⑬ [dynamic class-dara sharing](app-cds.sh) ([JEP 350](http://openjdk.java.net/jeps/350))
+* ⑬⑫⑩ [application class-dara sharing](app-cds.sh) ([article](http://blog.codefx.org/java/application-class-data-sharing/), [JEP 310](http://openjdk.java.net/jeps/310), [JEP 341](http://openjdk.java.net/jeps/341), [JEP 350](http://openjdk.java.net/jeps/350))
 * ⑪ [single-source-file execution](src/main/java/org/codefx/demo/java11/jvm/script) and scripting: run [the script](echo) with `cat echo-haiku.txt | ./echo` ([article](http://blog.codefx.org/java/scripting-java-shebang/), [JEP 330](https://openjdk.java.net/jeps/330))
-* ⑩ [application class-dara sharing](app-cds.sh) ([article](http://blog.codefx.org/java/application-class-data-sharing/), [JEP 310](http://openjdk.java.net/jeps/310), [JEP 341](http://openjdk.java.net/jeps/341))
 * ⑨ multi-release JARs: [classes](src/main/java/org/codefx/demo/java9/internal/multi_release) and [the script](multi-release.sh) ([JEP 238](http://openjdk.java.net/jeps/238))
 * ⑨ platform logging: [classes](src/platform_logging/java/org/codefx/demo/java9/api/platform_logging) and [the script](platform-logging.sh) ([JEP 264](http://openjdk.java.net/jeps/264))
 
