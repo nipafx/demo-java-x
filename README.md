@@ -1,7 +1,9 @@
-# Java After Eight Feature Demo
+# Java X Feature Demo
 
 Demonstrates most features that were introduced by Java 9 and later versions.
 The links below take you to the demos in this project, the JEPs responsible for introducing the feature, and to other sources if available.
+
+For a more practical approach to many of these features, including some quick code metrics, check my [_Java After Eight_ repo](https://github.com/CodeFX-org/java-after-eight). 
 
 These articles discuss the recent Java versions and list a lot of the new features:
 
