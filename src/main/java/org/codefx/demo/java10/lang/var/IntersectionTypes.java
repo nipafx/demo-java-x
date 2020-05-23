@@ -44,7 +44,7 @@ public class IntersectionTypes {
 		try (elements) {
 			return stream(elements)
 					.filter(condition)
-					.findAny();
+					.findFirst();
 		}
 	}
 
