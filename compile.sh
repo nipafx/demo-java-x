@@ -13,7 +13,7 @@ rm -rf target/*
 $javac \
 	--add-exports java.base/jdk.internal.vm.annotation=ALL-UNNAMED \
 	--enable-preview \
-	--source 13 \
+	--source 16 \
 	-d target/classes `find src/main/java -name "*.java"`
 # copy resources needed for `ResourceFileEncoding`
 cp resources/** target/classes

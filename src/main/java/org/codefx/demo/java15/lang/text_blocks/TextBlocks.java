@@ -1,4 +1,4 @@
-package org.codefx.demo.java13.lang.text_blocks;
+package org.codefx.demo.java15.lang.text_blocks;
 
 public class TextBlocks {
 
