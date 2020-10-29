@@ -72,6 +72,7 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 
 ## Language Changes
 
+* ⑯ [`instanceof` pattern matching](src/main/java/org/codefx/demo/java_next/lang/instanceof_) ([JEP 394](https://openjdk.java.net/jeps/394))
 * ⑮ [text blocks](src/main/java/org/codefx/demo/java15/lang/text_blocks/TextBlocks.java) ([article](https://blog.codefx.org/java/text-blocks), [JEP 378](https://openjdk.java.net/jeps/378))
 * ⑭  [switch expressions](src/main/java/org/codefx/demo/java14/lang/switch_/Switch.java) ([article](https://blog.codefx.org/java/switch-expressions/), [video](https://www.youtube.com/watch?v=1znHEf3oSNI), [JEP 361](https://openjdk.java.net/jeps/361))
 * ⑩ [local-variable type inference with `var`](src/main/java/org/codefx/demo/java10/lang/var/VariableTypeInference.java) ([article](http://blog.codefx.org/java/java-10-var-type-inference/), [video](https://www.youtube.com/watch?v=Le1DbpRZdRQ), [JEP 286](http://openjdk.java.net/jeps/286))
