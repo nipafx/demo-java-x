@@ -101,7 +101,8 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 
 * ⑫⑪ `String` [in Java 12](src/main/java/org/codefx/demo/java12/api/string)
   and [in Java 11](src/main/java/org/codefx/demo/java11/api/string)
-* ⑫⑨ `Stream` [in Java 12](src/main/java/org/codefx/demo/java12/api/stream/TeeingCollector.java) ([article](https://blog.codefx.org/java/teeing-collector/))
+* ⑯⑫⑨ `Stream` [in Java 16](src/main/java/org/codefx/demo/java16/api/stream/) ([article](https://nipafx.dev/java-16-stream-mapmulti)),
+  [in Java 12](src/main/java/org/codefx/demo/java12/api/stream/TeeingCollector.java) ([article](https://blog.codefx.org/java/teeing-collector/)),
   and [in Java 9](src/main/java/org/codefx/demo/java9/api/stream) ([article](http://blog.codefx.org/java/dev/java-9-stream/))
 * ⑫ [formating numbers](src/main/java/org/codefx/demo/java12/api/format/CompactFormat.java)
 * ⑫ [`Files::mismatch`](src/main/java/org/codefx/demo/java12/api/files/FilesMismatch.java)
