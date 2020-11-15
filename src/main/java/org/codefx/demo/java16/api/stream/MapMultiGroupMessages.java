@@ -4,11 +4,10 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
-import java.util.stream.Stream;
 
 import static java.util.Objects.requireNonNull;
 
-public class MapMultiLiftCollect {
+public class MapMultiGroupMessages {
 
 	public static void main(String[] args) {
 		List<Message> messages = List.of(
@@ -21,23 +20,23 @@ public class MapMultiLiftCollect {
 
 		System.out.println("Last group missing:");
 		messages.stream()
-				.mapMulti(new MessageGrouper()::groupByHour)
+				.mapMulti(new LateMessageGrouper()::groupByHour)
 				// groups aren't finalized until a message with a new hour is observed and so the last group is never finalized, i.e. missing
 				.forEach(group -> System.out.println(group.messages().get(0).timestamp().getHour() + "h: " + group.messages().size()));
 
 		System.out.println("Incomplete groups observed:");
 		messages.stream()
-				.mapMulti(new IncompleteMessageGrouper()::groupByHour)
+				.mapMulti(new EarlyMessageGrouper()::groupByHour)
 				// a new group is published as soon as a message with a new hour is observed and so, due to streams' implementation,
 				// incomplete groups can be observed (`findFirst` would be even worse!)
 				.forEach(group -> System.out.println(group.messages().get(0).timestamp().getHour() + "h: " + group.messages().size()));
 	}
 
-	private static class MessageGrouper {
+	private static class LateMessageGrouper {
 
 		private final List<Message> messages = new ArrayList<>();
 
-		public void groupByHour(Message message, Consumer<MessageGroup> lift) {
+		public void groupByHour(Message message, Consumer<MessageGroup> downstream) {
 			if (messages.isEmpty())
 				messages.add(message);
 			else {
@@ -46,7 +45,7 @@ public class MapMultiLiftCollect {
 				if (messageHour == currentHour)
 					messages.add(message);
 				else {
-					lift.accept(new MessageGroup(messages));
+					downstream.accept(new MessageGroup(messages));
 					messages.clear();
 					messages.add(message);
 				}
@@ -55,27 +54,27 @@ public class MapMultiLiftCollect {
 
 	}
 
-	private static class IncompleteMessageGrouper {
+	private static class EarlyMessageGrouper {
 
 		private MessageGroup currentGroup;
 
-		public void groupByHour(Message message, Consumer<MessageGroup> lift) {
+		public void groupByHour(Message message, Consumer<MessageGroup> downstream) {
 			if (currentGroup == null)
-				startNextGroup(message, lift);
+				startNextGroup(message, downstream);
 			else {
 				int messageHour = message.timestamp().getHour();
 				int currentHour = currentGroup.messages.get(0).timestamp().getHour();
 				if (messageHour == currentHour)
 					currentGroup.messages.add(message);
 				else
-					startNextGroup(message, lift);
+					startNextGroup(message, downstream);
 			}
 		}
 
-		private void startNextGroup(Message message, Consumer<MessageGroup> lift) {
+		private void startNextGroup(Message message, Consumer<MessageGroup> downstream) {
 			currentGroup = new MessageGroup();
-			currentGroup.messages.add(message);
-			lift.accept(currentGroup);
+			currentGroup.messages().add(message);
+			downstream.accept(currentGroup);
 		}
 
 	}
@@ -83,7 +82,7 @@ public class MapMultiLiftCollect {
 	record MessageGroup(List<Message> messages) {
 
 		MessageGroup {
-			messages = new ArrayList<>(messages);
+			requireNonNull(messages);
 		}
 
 		MessageGroup() {

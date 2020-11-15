@@ -9,10 +9,10 @@ import java.util.regex.Pattern;
 
 import static java.util.Objects.requireNonNull;
 
-public class MapMultiLiftParse {
+public class MapMultiParse {
 
 	public static void main(String[] args) {
-		MapMultiLiftParse multi = new MapMultiLiftParse();
+		MapMultiParse multi = new MapMultiParse();
 		multi.parsePerson();
 	}
 
