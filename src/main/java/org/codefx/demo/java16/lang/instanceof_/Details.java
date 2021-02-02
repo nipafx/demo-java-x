@@ -28,7 +28,7 @@ public class Details {
 	public void reassign(Object object) {
 		if (object instanceof String string) {
 			// no longer a compile error on Java 16
-//			string = string.substring(5);
+			string = string.substring(5);
 			System.out.println(string);
 		}
 	}
