@@ -100,6 +100,7 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 
 ## Updated APIs
 
+* ⑯ [Unix domain socket support in `SocketChannel`/`ServerSocketChannel` API](src/main/java/org/codefx/demo/java16/api/unix_sockets) ([JEP 380](https://openjdk.java.net/jeps/380), [article](https://nipafx.dev/java-unix-domain-sockets/))
 * ⑫⑪ `String` [in Java 12](src/main/java/org/codefx/demo/java12/api/string)
   and [in Java 11](src/main/java/org/codefx/demo/java11/api/string)
 * ⑯⑫⑨ `Stream` [in Java 16](src/main/java/org/codefx/demo/java16/api/stream/) (article [1](https://nipafx.dev/java-16-stream-mapmulti), [2](https://nipafx.dev/java-16-stream-mapmulti-group)),
