@@ -73,7 +73,7 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 ## Language Changes
 
 * ⓧ [sealed classes](src/main/java/org/codefx/demo/java_next/lang/sealed) ([JEP 360](https://openjdk.java.net/jeps/360))
-* ⑯ [`instanceof` pattern matching](src/main/java/org/codefx/demo/java16/lang/instanceof_) ([JEP 394](https://openjdk.java.net/jeps/394))
+* ⑯ [`instanceof` pattern matching](src/main/java/org/codefx/demo/java16/lang/instanceof_) (articles [1](https://nipafx.dev/java-pattern-matching/), [2](https://nipafx.dev/java-type-pattern-matching/), [JEP 394](https://openjdk.java.net/jeps/394))
 * ⑮ [text blocks](src/main/java/org/codefx/demo/java15/lang/text_blocks/TextBlocks.java) ([article](https://blog.codefx.org/java/text-blocks), [JEP 378](https://openjdk.java.net/jeps/378))
 * ⑭ [switch expressions](src/main/java/org/codefx/demo/java14/lang/switch_/Switch.java) ([article](https://blog.codefx.org/java/switch-expressions/), [video](https://www.youtube.com/watch?v=1znHEf3oSNI), [JEP 361](https://openjdk.java.net/jeps/361))
 * ⑩ [local-variable type inference with `var`](src/main/java/org/codefx/demo/java10/lang/var/VariableTypeInference.java) ([article](http://blog.codefx.org/java/java-10-var-type-inference/), [video](https://www.youtube.com/watch?v=Le1DbpRZdRQ), [JEP 286](http://openjdk.java.net/jeps/286))
@@ -88,6 +88,7 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 
 ## New APIs
 
+* ⑯ [Unix domain sockets](src/main/java/org/codefx/demo/java16/api/unix_sockets) ([article](https://nipafx.dev/java-unix-domain-sockets/), [JEP-380](https://openjdk.java.net/jeps/380))
 * ⑪ HTTP/2 client: [simple](src/main/java/org/codefx/demo/java11/api/http2/Http2Api.java), [more formal](src/main/java/org/codefx/demo/java11/api/http2/formalized) ([tutorial](https://blog.codefx.org/java/http-2-api-tutorial/), [reactive request/response bodies](https://blog.codefx.org/java/reactive-http-2-requests-responses/))
 * ⑩⑨ version API, [introduced in Java 9](src/main/java/org/codefx/demo/java9/api/version/VersionApi.java),
   [updated in Java 10](src/main/java/org/codefx/demo/java10/api/version/VersionApi.java)
