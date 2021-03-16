@@ -2,8 +2,9 @@ plugins {
 	id 'java'
 }
 
-sourceCompatibility = 12
-targetCompatibility = 12
+// https://github.com/gradle/gradle/issues/13481
+sourceCompatibility = 16
+targetCompatibility = 16
 
 repositories {
 	mavenCentral()
@@ -16,5 +17,5 @@ dependencies {
 }
 
 compileJava {
-	options.compilerArgs += ["--enable-preview"]
+	options.compilerArgs += ["--add-exports=java.base/jdk.internal.vm.annotation=ALL-UNNAMED", "--enable-preview"]
 }
