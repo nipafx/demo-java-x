@@ -11,7 +11,7 @@ jobs:
         java: [16]
       fail-fast: false
       max-parallel: 4
-    name: Test JDK ${{ matrix.java }}, ${{ matrix.os }}
+    name: Build with JDK ${{ matrix.java }} on ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK ${{ matrix.java }}
