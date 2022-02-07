@@ -10,8 +10,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>16</maven.compiler.source>
-		<maven.compiler.target>16</maven.compiler.target>
+		<!-- setting `release` doesn't work because of the `add-opens` below -->
+		<maven.compiler.source>18</maven.compiler.source>
+		<maven.compiler.target>18</maven.compiler.target>
 	</properties>
 
 	<dependencies>
@@ -26,7 +27,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
+				<version>3.9.0</version>
 				<configuration>
 					<!-- The flag "add-exports java.base/jdk.internal.vm.annotation=ALL-UNNAMED"
 							is needed to get access to `@ReservedStackAccess` in `ReservedStackAccess` -->
@@ -40,7 +41,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.2.0</version>
+				<version>3.2.2</version>
 				<configuration>
 					<archive>
 						<manifest>
@@ -53,7 +54,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.1.2</version>
+				<version>3.2.0</version>
 				<executions>
 					<execution>
 						<id>copy-installed</id>
