@@ -1,5 +1,9 @@
-package org.codefx.demo.java_next.lang.sealed.shape;
+package org.codefx.demo.java17.lang.sealed;
 
+/**
+ * Rectangle allows one further implementation, namely {@link Square}
+ * (because it's {@code sealed}).
+ */
 public sealed class Rectangle
 		implements Shape
 		permits Square {

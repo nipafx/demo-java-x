@@ -1,4 +1,4 @@
-package org.codefx.demo.java_next.lang.sealed.shape;
+package org.codefx.demo.java17.lang.sealed;
 
 public final class Square extends Rectangle {
 

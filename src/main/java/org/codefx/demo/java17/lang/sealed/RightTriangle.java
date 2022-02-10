@@ -1,5 +1,10 @@
-package org.codefx.demo.java_next.lang.sealed.shape;
+package org.codefx.demo.java17.lang.sealed;
 
+/**
+ * Because {@link Triangle} isn't sealed, {@code RightTriangle} can implement
+ * it without having to be {@code final}, {@code sealed}, or {@code non-sealed}
+ * itself.
+ */
 public class RightTriangle implements Triangle {
 
 	private final double adjacent;
@@ -12,12 +17,6 @@ public class RightTriangle implements Triangle {
 
 	@Override
 	public double area() {
-		interface People { String name(); }
-		record Person(String name) implements People { }
-		record Persons(String... names) { }
-
-		People p = new Person("John Doe");
-
 		return adjacent * opposite / 2;
 	}
 
