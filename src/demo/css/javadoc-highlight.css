@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+.scary {
+	font-family: "Creepster", cursive;
+	font-size: 2em;
+	line-height: 1.2;
+	color: #8a0303;
+	background-color: unset;
+}
+
+.scary::after {
+	content: "👻";
+	background-color: #8a0303;
+	padding: 0.5em 0.5em 0.25em;
+	border-radius: 0.25em;
+	margin: 0 0.5em 0 0.25em;
+}

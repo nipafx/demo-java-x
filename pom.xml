@@ -102,11 +102,17 @@
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>3.3.1</version>
 				<configuration>
-					<release>${maven.compiler.source}</release>
 					<subpackages>org.codefx.demo.java18.jvm.javadoc</subpackages>
-					<!-- set the demo folder as snippet-path to find snippet files there -->
-					<additionalOptions>--snippet-path ${project.basedir}/src/demo/java</additionalOptions>
 				</configuration>
+				<executions>
+					<execution>
+						<id>create-javadoc</id>
+						<phase>package</phase>
+						<goals>
+							<goal>javadoc</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -135,5 +141,51 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<!-- on JDK 17 and before, configure Javadoc to ignore (unknown) @snippet tags -->
+		<profile>
+			<id>java-17-</id>
+			<activation>
+				<jdk>(,17]</jdk>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<configuration>
+							<tags>
+								<tag>
+									<name>snippet</name>
+									<placement>x</placement>
+								</tag>
+							</tags>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<!-- on JDK 18 and later, configure Javadoc with snippet path to demo source tree -->
+		<profile>
+			<id>java-18+</id>
+			<activation>
+				<jdk>[18,)</jdk>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<configuration>
+							<!-- set the demo and folders as snippet-path to find snippet files there -->
+							<additionalOptions>
+								<additionalOption>--snippet-path ${project.basedir}/src/demo/java${path.separator}${project.basedir}/src/demo/css</additionalOption>
+								<additionalOption>--add-stylesheet ${project.basedir}/src/demo/css/javadoc-highlight.css</additionalOption>
+							</additionalOptions>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 </project>
