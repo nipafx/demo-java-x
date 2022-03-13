@@ -1,3 +1,7 @@
+import org.codefx.demo.java17.api.random.Xkcd;
+
+import java.util.random.RandomGenerator;
+
 /**
  * Project demonstrating various Java features introduced since Java 9.
  */
@@ -6,4 +10,6 @@ module org.codefx.demo.java_x {
 
 	requires java.desktop;
 	requires java.net.http;
+
+	provides RandomGenerator with Xkcd;
 }

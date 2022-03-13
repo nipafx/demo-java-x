@@ -89,6 +89,7 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 
 ## New APIs
 
+* ⑰ [random generator](src/main/java/org/codefx/demo/java17/api/random) ([article](https://nipafx.dev/java-random-generator/), [JEP 356](https://openjdk.java.net/jeps/356), [very good Javadoc](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html))
 * ⑯ [Unix domain sockets](src/main/java/org/codefx/demo/java16/api/unix_sockets) ([article](https://nipafx.dev/java-unix-domain-sockets/), [JEP-380](https://openjdk.java.net/jeps/380))
 * ⑪ HTTP/2 client: [simple](src/main/java/org/codefx/demo/java11/api/http2/Http2Api.java), [more formal](src/main/java/org/codefx/demo/java11/api/http2/formalized) ([tutorial](https://blog.codefx.org/java/http-2-api-tutorial/), [reactive request/response bodies](https://blog.codefx.org/java/reactive-http-2-requests-responses/))
 * ⑩⑨ version API, [introduced in Java 9](src/main/java/org/codefx/demo/java9/api/version/VersionApi.java),

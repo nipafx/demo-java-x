@@ -51,6 +51,8 @@
 					<compilerArgs>
 						<!-- get access to `@ReservedStackAccess` in `ReservedStackAccess` -->
 						<arg>--add-exports=java.base/jdk.internal.vm.annotation=org.codefx.demo.java_x</arg>
+						<!-- get access to `@RandomGeneratorProperties` in `Xkcd` -->
+						<arg>--add-exports=java.base/jdk.internal.util.random=org.codefx.demo.java_x</arg>
 					</compilerArgs>
 				</configuration>
 			</plugin>
@@ -104,6 +106,10 @@
 				<configuration>
 					<sourcepath>src/main/java</sourcepath>
 					<subpackages>org.codefx.demo.java18.jvm.javadoc</subpackages>
+					<additionalJOptions>
+						<!-- get access to `@RandomGeneratorProperties` in `Xkcd` -->
+						<additionalJOption>--add-exports=java.base/jdk.internal.util.random=org.codefx.demo.java_x</additionalJOption>
+					</additionalJOptions>
 				</configuration>
 				<executions>
 					<execution>
