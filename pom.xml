@@ -46,12 +46,11 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.9.0</version>
 				<configuration>
-					<!-- The flag "add-exports java.base/jdk.internal.vm.annotation=ALL-UNNAMED"
-							is needed to get access to `@ReservedStackAccess` in `ReservedStackAccess` -->
 					<!-- The flag "enable-preview" is needed for preview language features
 							like switch expressions in Java 12-->
 					<compilerArgs>
-						<arg>--add-exports=java.base/jdk.internal.vm.annotation=ALL-UNNAMED</arg>
+						<!-- get access to `@ReservedStackAccess` in `ReservedStackAccess` -->
+						<arg>--add-exports=java.base/jdk.internal.vm.annotation=org.codefx.demo.java_x</arg>
 						<arg>--enable-preview</arg>
 					</compilerArgs>
 				</configuration>
@@ -84,6 +83,8 @@
 						<!-- execute files ending in `Demo` as tests -->
 						<include>**/*Demo.java</include>
 					</includes>
+					<!-- make demos accessible for testing framework -->
+					<argLine>--add-opens=org.codefx.demo.java_x/org.codefx.demo.java18.jvm.javadoc=ALL-UNNAMED</argLine>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -102,6 +103,7 @@
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>3.3.1</version>
 				<configuration>
+					<sourcepath>src/main/java</sourcepath>
 					<subpackages>org.codefx.demo.java18.jvm.javadoc</subpackages>
 				</configuration>
 				<executions>
