@@ -6,7 +6,7 @@
 
 	<groupId>org.codefx.demo</groupId>
 	<artifactId>java-x</artifactId>
-	<version>16.0-SNAPSHOT</version>
+	<version>18.0-SNAPSHOT</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -44,14 +44,13 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.9.0</version>
+				<version>3.10.1</version>
 				<configuration>
-					<!-- The flag "enable-preview" is needed for preview language features
-							like switch expressions in Java 12-->
+					<!-- needed for preview language features (like pattern switches were in Java 18) -->
+					<enablePreview>true</enablePreview>
 					<compilerArgs>
 						<!-- get access to `@ReservedStackAccess` in `ReservedStackAccess` -->
 						<arg>--add-exports=java.base/jdk.internal.vm.annotation=org.codefx.demo.java_x</arg>
-						<arg>--enable-preview</arg>
 					</compilerArgs>
 				</configuration>
 			</plugin>
@@ -101,7 +100,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>3.3.1</version>
+				<version>3.3.2</version>
 				<configuration>
 					<sourcepath>src/main/java</sourcepath>
 					<subpackages>org.codefx.demo.java18.jvm.javadoc</subpackages>
@@ -118,7 +117,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.2.0</version>
+				<version>3.3.0</version>
 				<executions>
 					<execution>
 						<id>copy-installed</id>
