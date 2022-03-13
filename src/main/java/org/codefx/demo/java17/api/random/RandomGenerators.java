@@ -37,6 +37,9 @@ public class RandomGenerators {
 		// (for implemented algorithms, see Javadoc of java.util.random)
 		var lxm = RandomGenerator.of("L128X128MixRandom");
 		var xoshiro = RandomGenerator.of("Xoshiro256PlusPlus");
+
+		// even works with custom implementations by using the class' simple name
+		var xkcd = RandomGenerator.of("Xkcd");
 	}
 
 	private static void moreInterfaces() {

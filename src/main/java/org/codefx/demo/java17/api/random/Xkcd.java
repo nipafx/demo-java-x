@@ -5,11 +5,13 @@ import jdk.internal.util.random.RandomSupport.RandomGeneratorProperties;
 import java.util.random.RandomGenerator.ArbitrarilyJumpableGenerator;
 
 /*
- * It's possible to provide custom implementations of the generator interfaces that
- * get picked up by the generator factory API (including the `.of("name")` methods),
- * but that requires use of the JDK-internal annotation `@RandomGeneratorProperties`.
+ * It's possible to provide custom implementations of the generator interfaces by
+ * providing them as a service (see module declaration). Out of the box, that works
+ * with `RandomGenerator::of` (and on the other generator interfaces).
  *
- * While this works, the integration mechanism isn't meant for public use.
+ * By using the JDK-internal annotation `@RandomGeneratorProperties` (and possibly
+ * opening this package to java.base), it also works with `RandomGeneratorFactory`,
+ * but the integration mechanism isn't meant for public use.
  */
 
 @RandomGeneratorProperties(
