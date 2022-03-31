@@ -1,5 +1,7 @@
 import org.codefx.demo.java17.api.random.Xkcd;
+import org.codefx.demo.java18.api.ip_resolution.ForwardingInetAddressResolverProvider;
 
+import java.net.spi.InetAddressResolverProvider;
 import java.util.random.RandomGenerator;
 
 /**
@@ -12,4 +14,5 @@ module org.codefx.demo.java_x {
 	requires java.net.http;
 
 	provides RandomGenerator with Xkcd;
+	provides InetAddressResolverProvider with ForwardingInetAddressResolverProvider;
 }
