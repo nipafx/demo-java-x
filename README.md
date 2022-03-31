@@ -118,7 +118,7 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 * ⑪ [`Collection`](src/main/java/org/codefx/demo/java11/api/collection/ToArray.java)
 * ⑪⑨ `Optional` [in Java 11](src/main/java/org/codefx/demo/java11/api/optional/IsEmpty.java)
   and [in Java 9](src/main/java/org/codefx/demo/java9/api/optional/Or.java) ([article](http://blog.codefx.org/java/dev/java-9-optional/))
-* ⑨ [OS processes](src/main/java/org/codefx/demo/java9/api/processes/PipeProcessesAndAwaitCompletion.java) ([JEP 102](http://openjdk.java.net/jeps/102))
+* ⑨ [OS processes](src/main/java/org/codefx/demo/java9/api/processes) ([JEP 102](http://openjdk.java.net/jeps/102))
 
 Some of the small changes have their own articles (in which case they are linked), but many don't.
 Most are show-cased in these posts, though:
