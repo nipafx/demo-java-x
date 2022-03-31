@@ -100,7 +100,7 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 * ⑨ [stack walking](src/main/java/org/codefx/demo/java9/api/stack_walking/StackWalking.java) ([JEP 259](http://openjdk.java.net/jeps/259), [post on SitePoint](https://www.sitepoint.com/deep-dive-into-java-9s-stack-walking-api/) including benchmarks)
 * ⑨ [multi-resolution images](src/main/java/org/codefx/demo/java9/api/multi_resolution_images/Images.java) ([JEP 251](http://openjdk.java.net/jeps/251))
 * ⑨ platform-specific desktop features (not supported by my OS so [my sample](src/main/java/org/codefx/demo/java9/api/desktop/DesktopFeatures.java) sucks; PRs welcome! [JEP 272](http://openjdk.java.net/jeps/272))
-* ⑨ deserialization filter (targeted for JDK 9 but wasn't implemented when I created this; [JEP 290](http://openjdk.java.net/jeps/290))
+* ⑨ [deserialization filter](src/main/java/org/codefx/demo/java9/api/deserialization_filter) ([JEP 290](http://openjdk.java.net/jeps/290))
 
 ## Updated APIs
 

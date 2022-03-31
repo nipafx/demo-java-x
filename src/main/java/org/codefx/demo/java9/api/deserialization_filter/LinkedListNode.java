@@ -1,9 +1,11 @@
-package org.codefx.demo.java9.api.serialization_filter;
+package org.codefx.demo.java9.api.deserialization_filter;
 
 import java.io.Serializable;
 import java.util.Objects;
 
 public class LinkedListNode implements Serializable {
+
+	private static final long serialVersionUID = -6614892775246024176L;
 
 	private final String data;
 	private final LinkedListNode next;
