@@ -116,8 +116,8 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 * ⑪ [I/O](src/main/java/org/codefx/demo/java11/api/io)
 * ⑪ [`Predicate` / `Pattern`](src/main/java/org/codefx/demo/java11/api/predicate)
 * ⑪ [`Collection`](src/main/java/org/codefx/demo/java11/api/collection/ToArray.java)
-* ⑪⑨ `Optional` [in Java 11](src/main/java/org/codefx/demo/java11/api/optional/IsEmpty.java)
-  and [in Java 9](src/main/java/org/codefx/demo/java9/api/optional/Or.java) ([article](http://blog.codefx.org/java/dev/java-9-optional/))
+* ⑪⑩⑨ `Optional` [in Java 11](src/main/java/org/codefx/demo/java11/api/optional/IsEmpty.java), [in Java 10](src/main/java/org/codefx/demo/java10/api/optional/OrElseThrow.java),
+  and [in Java 9](src/main/java/org/codefx/demo/java9/api/optional/Or.java) ([article](http://blog.codefx.org/java/dev/java-9-optional/))^
 * ⑨ [OS processes](src/main/java/org/codefx/demo/java9/api/processes) ([JEP 102](http://openjdk.java.net/jeps/102))
 
 Some of the small changes have their own articles (in which case they are linked), but many don't.
