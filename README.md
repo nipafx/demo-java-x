@@ -131,6 +131,7 @@ Most are show-cased in these posts, though:
 * ⑱ external snippets in Javadoc: [referencing class](src/main/java/org/codefx/demo/java18/jvm/javadoc/SnippetDocs.java), [referenced demo class](src/demo/java/SnippetDocsDemo.java), and [configuration](pom.xml) ([feature introduction](https://nipafx.dev/inside-java-newscast-20/), [Maven how-to](https://nipafx.dev/javadoc-snippets-maven/), [JEP 413](http://openjdk.java.net/jeps/413))
 * ⑬⑫⑩ [application class-dara sharing](app-cds.sh) ([article](http://blog.codefx.org/java/application-class-data-sharing/), [JEP 310](http://openjdk.java.net/jeps/310), [JEP 341](http://openjdk.java.net/jeps/341), [JEP 350](http://openjdk.java.net/jeps/350))
 * ⑪ [single-source-file execution](src/main/java/org/codefx/demo/java11/jvm/script) and scripting: run [the script](echo) with `cat echo-haiku.txt | ./echo` ([article](http://blog.codefx.org/java/scripting-java-shebang/), [JEP 330](https://openjdk.java.net/jeps/330))
+* ⑨ [unified logging](unified-logging.sh) ([article](https://nipafx.dev/java-unified-logging-xlog/), [JEP 158](http://openjdk.java.net/jeps/158))
 * ⑨ multi-release JARs: [classes](src/main/java/org/codefx/demo/java9/internal/multi_release) and [the script](multi-release.sh) ([JEP 238](http://openjdk.java.net/jeps/238))
 * ⑨ platform logging: [classes](src/platform_logging/java/org/codefx/demo/java9/api/platform_logging) and [the script](platform-logging.sh) ([JEP 264](http://openjdk.java.net/jeps/264))
 
