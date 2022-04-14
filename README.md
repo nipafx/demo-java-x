@@ -105,11 +105,12 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 ## Updated APIs
 
 * ⑯ [Unix domain socket support in `SocketChannel`/`ServerSocketChannel` API](src/main/java/org/codefx/demo/java16/api/unix_sockets) ([JEP 380](https://openjdk.java.net/jeps/380), [article](https://nipafx.dev/java-unix-domain-sockets/))
+* ⑯⑫⑩⑨ `Stream` [in Java 16](src/main/java/org/codefx/demo/java16/api/stream) (article [1](https://nipafx.dev/java-16-stream-mapmulti), [2](https://nipafx.dev/java-16-stream-mapmulti-group)),
+  [in Java 12](src/main/java/org/codefx/demo/java12/api/stream/TeeingCollector.java) ([article](https://blog.codefx.org/java/teeing-collector/)),
+  [in Java 10](src/main/java/org/codefx/demo/java10/api/stream/CollectToUnmodifiable.java),
+  and [in Java 9](src/main/java/org/codefx/demo/java9/api/stream) ([article](http://blog.codefx.org/java/dev/java-9-stream/))
 * ⑫⑪ `String` [in Java 12](src/main/java/org/codefx/demo/java12/api/string)
   and [in Java 11](src/main/java/org/codefx/demo/java11/api/string)
-* ⑯⑫⑨ `Stream` [in Java 16](src/main/java/org/codefx/demo/java16/api/stream/) (article [1](https://nipafx.dev/java-16-stream-mapmulti), [2](https://nipafx.dev/java-16-stream-mapmulti-group)),
-  [in Java 12](src/main/java/org/codefx/demo/java12/api/stream/TeeingCollector.java) ([article](https://blog.codefx.org/java/teeing-collector/)),
-  and [in Java 9](src/main/java/org/codefx/demo/java9/api/stream) ([article](http://blog.codefx.org/java/dev/java-9-stream/))
 * ⑫ [formating numbers](src/main/java/org/codefx/demo/java12/api/format/CompactFormat.java)
 * ⑫ [`Files::mismatch`](src/main/java/org/codefx/demo/java12/api/files/FilesMismatch.java)
 * ⑫ [error recovery with `CompletableFuture`](src/main/java/org/codefx/demo/java12/api/future/Recovery.java)
