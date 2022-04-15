@@ -113,7 +113,7 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
   and [in Java 11](src/main/java/org/codefx/demo/java11/api/string)
 * ⑫ [formating numbers](src/main/java/org/codefx/demo/java12/api/format/CompactFormat.java)
 * ⑫ [`Files::mismatch`](src/main/java/org/codefx/demo/java12/api/files/FilesMismatch.java)
-* ⑫ [error recovery with `CompletableFuture`](src/main/java/org/codefx/demo/java12/api/future/Recovery.java)
+* ⑫ `CompletableFuture` [in Java 12](src/main/java/org/codefx/demo/java12/api/future/Recovery.java) and [in Java 9](src/main/java/org/codefx/demo/java9/api/future/CompletableAdditions.java)
 * ⑪ [I/O](src/main/java/org/codefx/demo/java11/api/io)
 * ⑪ [`Predicate` / `Pattern`](src/main/java/org/codefx/demo/java11/api/predicate)
 * ⑪ [`Collection`](src/main/java/org/codefx/demo/java11/api/collection/ToArray.java)
