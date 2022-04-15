@@ -107,6 +107,7 @@ public class VariableTypeInference {
 //	}
 
 	private void miscErrors() {
+		// From JEP 286:
 		// "Rejecting locals without initializers narrows the scope of the feature,
 		// avoiding "action at a distance" inference errors, and only excludes a
 		// small portion of locals in typical programs."
@@ -125,9 +126,6 @@ public class VariableTypeInference {
 		// "have extra array dimension brackets"
 		int ints[] = new int[0];
 //		var ints[] = new int[0];
-
-		// "reference the variable being initialized"
-		// TODO
 
 		// lambda variables (works on Java 11+)
 //		Function<String, String> appendSpace = (var a) -> a + " ";
