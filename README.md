@@ -74,6 +74,7 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 
 * ⑰ [sealed classes](src/main/java/org/codefx/demo/java17/lang/sealed) (articles [1](https://www.infoq.com/articles/java-sealed-classes/), [2](https://nipafx.dev/java-visitor-pattern-pointless/), [JEP 409](https://openjdk.java.net/jeps/409))
 * ⑯ [`instanceof` pattern matching](src/main/java/org/codefx/demo/java16/lang/instanceof_) (articles [1](https://nipafx.dev/java-pattern-matching/), [2](https://nipafx.dev/java-type-pattern-matching/), [JEP 394](https://openjdk.java.net/jeps/394))
+* ⑯ [records](src/main/java/org/codefx/demo/java16/lang/record) ([article](https://nipafx.dev/java-record-semantics/), [JEP 395](https://openjdk.java.net/jeps/395))
 * ⑯ [static members of (non-static) inner classes](src/main/java/org/codefx/demo/java16/lang/staticinner/OuterClass.java) ([JDK-8254105](https://bugs.openjdk.java.net/browse/JDK-8254105))
 * ⑮ [text blocks](src/main/java/org/codefx/demo/java15/lang/text_blocks/TextBlocks.java) ([article](https://blog.codefx.org/java/text-blocks), [JEP 378](https://openjdk.java.net/jeps/378))
 * ⑭ [switch expressions](src/main/java/org/codefx/demo/java14/lang/switch_/Switch.java) ([article](https://blog.codefx.org/java/switch-expressions/), [video](https://www.youtube.com/watch?v=1znHEf3oSNI), [JEP 361](https://openjdk.java.net/jeps/361))
