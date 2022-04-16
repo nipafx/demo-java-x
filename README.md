@@ -110,7 +110,8 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
   [in Java 12](src/main/java/org/codefx/demo/java12/api/stream/TeeingCollector.java) ([article](https://blog.codefx.org/java/teeing-collector/)),
   [in Java 10](src/main/java/org/codefx/demo/java10/api/stream/CollectToUnmodifiable.java),
   and [in Java 9](src/main/java/org/codefx/demo/java9/api/stream) ([article](http://blog.codefx.org/java/dev/java-9-stream/))
-* ⑫⑪ `String` [in Java 12](src/main/java/org/codefx/demo/java12/api/string)
+* ⑮⑫⑪ `String` [in Java 15](src/main/java/org/codefx/demo/java15/api/string/FormatString.java),
+  [in Java 12](src/main/java/org/codefx/demo/java12/api/string),
   and [in Java 11](src/main/java/org/codefx/demo/java11/api/string)
 * ⑫ [formating numbers](src/main/java/org/codefx/demo/java12/api/format/CompactFormat.java)
 * ⑫ [`Files::mismatch`](src/main/java/org/codefx/demo/java12/api/files/FilesMismatch.java)
