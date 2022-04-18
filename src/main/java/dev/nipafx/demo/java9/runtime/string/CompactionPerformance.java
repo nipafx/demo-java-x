@@ -8,14 +8,14 @@ import static java.util.stream.Collectors.toList;
 public class CompactionPerformance {
 
 	// To play around with this:
-	//  (1) build the project with `mvn package`
-	//  (2) run with either of the following lines
+	//  1. build the project with `mvn package`
+	//  2. run with either of the following lines
 	//
 	// WITH COMPACT STRINGS (enabled by default):
-	// 	java -p target/java-x.jar -m dev.nipafx.demo.java_x/dev.nipafx.demo.java9.runtime.string.CompactionPerformance
+	// 	java -p target/app -m dev.nipafx.demo.java_x/dev.nipafx.demo.java9.runtime.string.CompactionPerformance
 	//
 	// WITHOUT COMPACT STRINGS:
-	// 	java -p target/java-x.jar -m dev.nipafx.demo.java_x/dev.nipafx.demo.java9.runtime.string.CompactionPerformance
+	// 	java -p target/app -m dev.nipafx.demo.java_x/dev.nipafx.demo.java9.runtime.string.CompactionPerformance
 	//
 	// This is just for fun! Use JMH for a serious/reliable performance examination.
 

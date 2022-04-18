@@ -120,7 +120,8 @@ Most are show-cased in these posts, though:
 
 ## Runtime & Tooling
 
-* ⑱ external snippets in Javadoc: [referencing class](src/main/java/dev/nipafx/demo/java18/javadoc/SnippetDocs.java), [referenced demo class](src/demo/java/SnippetDocsDemo.java), and [configuration](pom.xml) ([feature introduction](https://nipafx.dev/inside-java-newscast-20/), [Maven how-to](https://nipafx.dev/javadoc-snippets-maven/), [JEP 413](http://openjdk.java.net/jeps/413))
+* ⑱ external snippets in Javadoc: [referencing class (and how-to)](src/main/java/dev/nipafx/demo/java18/javadoc/SnippetDocs.java), [referenced demo class](src/demo/java/SnippetDocsDemo.java), and [build configuration](pom.xml) ([video](https://nipafx.dev/inside-java-newscast-20/), [Maven how-to](https://nipafx.dev/javadoc-snippets-maven/), [JEP 413](http://openjdk.java.net/jeps/413))
+* ⑱ `jwebserver`, a simple web server ([video](https://www.youtube.com/watch?v=IsCEzP-inkU), [JEP 408](https://openjdk.java.net/jeps/408))
 * ⑯⑭ [helpful `NullPointerException`s]:
   added [in Java 14](src/main/java/dev/nipafx/demo/java14/runtime/npe/ShowNpeDetails.java) ([JEP 358](https://openjdk.java.net/jeps/358)),
   enabled by default [in Java 16](src/main/java/dev/nipafx/demo/java16/runtime/npe/ShowNpeDetailsByDefault.java)

@@ -1,5 +1,12 @@
 package dev.nipafx.demo.java18.javadoc;
 
+/*
+ * HOW TO:
+ *  1. build project with `mvn package`
+ *  2. launch webserver in `target/site/apidocs`, e.g. with `jwebserver` on port 8000
+ *  3. visit http://localhost:8000/dev.nipafx.demo.java_x/dev/nipafx/demo/java18/javadoc/SnippetDocs.html
+ */
+
 /**
  * This class has a constructor and here's how you call it:
  * {@snippet class="SnippetDocsDemo" region="constructor"}

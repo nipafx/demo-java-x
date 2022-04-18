@@ -1,6 +1,12 @@
 #!/bin/bash
 set -e
 
+if ! [ -e target/app ]
+then
+	printf "# Building Maven project, so app JARs are available...\n"
+    mvn clean package
+fi
+
 echo "# Creating clean directories"
 rm -rf target/logging/classes
 mkdir -p target/logging/classes
@@ -20,7 +26,8 @@ jar \
 echo "# Compiling and packaging app"
 mkdir target/logging/classes/dev.nipafx.demo.java9.app
 javac \
-	-d target/logging/classes/dev.nipafx.demo.java9.app\
+	-p target/app \
+	-d target/logging/classes/dev.nipafx.demo.java9.app \
 	src/platform_logging/java/dev/nipafx/demo/java9/api/platform_logging/app/*.java
 jar \
 	-c \
@@ -29,4 +36,4 @@ jar \
 	-C target/logging/classes/dev.nipafx.demo.java9.app/ .
 
 echo "# Running App"
-java -verbose:gc -p target/logging/mods -m dev.nipafx.demo.javaX.app
+java -verbose:gc -p target/app:target/logging/mods -m dev.nipafx.demo.javaX.app

@@ -136,7 +136,7 @@
 				<executions>
 					<execution>
 						<id>copy-installed</id>
-						<phase>install</phase>
+						<phase>package</phase>
 						<goals>
 							<goal>copy</goal>
 						</goals>
@@ -149,8 +149,19 @@
 									<type>${project.packaging}</type>
 								</artifactItem>
 							</artifactItems>
-							<outputDirectory>target</outputDirectory>
 							<stripVersion>true</stripVersion>
+							<outputDirectory>${project.build.directory}/app</outputDirectory>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<includeScope>compile</includeScope>
+							<outputDirectory>${project.build.directory}/app</outputDirectory>
 						</configuration>
 					</execution>
 				</executions>
