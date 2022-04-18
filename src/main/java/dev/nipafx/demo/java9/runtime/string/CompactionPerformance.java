@@ -15,7 +15,7 @@ public class CompactionPerformance {
 	// 	java -p target/app -m dev.nipafx.demo.java_x/dev.nipafx.demo.java9.runtime.string.CompactionPerformance
 	//
 	// WITHOUT COMPACT STRINGS:
-	// 	java -p target/app -m dev.nipafx.demo.java_x/dev.nipafx.demo.java9.runtime.string.CompactionPerformance
+	// 	java -XX:-CompactStrings -p target/app -m dev.nipafx.demo.java_x/dev.nipafx.demo.java9.runtime.string.CompactionPerformance
 	//
 	// This is just for fun! Use JMH for a serious/reliable performance examination.
 
