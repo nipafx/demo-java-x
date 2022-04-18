@@ -1,4 +1,12 @@
-#!/opt/jdk-11/bin/java --source 11
+#!/home/nipa/.sdkman/candidates/java/current/bin/java --source 11
+
+// To run this, update the path in the first line to point to your `java` binary,
+// then run `./echo` in your terminal. Nothing much will happen - for the full
+// story, run ...
+//
+//     cat echo-haiku.txt | ./echo
+//
+// ... with one of the command line flags `--sort` or `..reverse`.
 
 import java.io.BufferedReader;
 import java.io.IOException;

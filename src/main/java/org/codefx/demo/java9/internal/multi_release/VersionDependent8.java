@@ -6,7 +6,7 @@ package org.codefx.demo.java9.internal.multi_release;
 public class VersionDependent8 {
 
 	public String version() {
-		return "Java 8 version";
+		return "Java 8";
 	}
 
 }

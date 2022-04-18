@@ -6,7 +6,7 @@ package org.codefx.demo.java9.internal.multi_release;
 public class VersionDependent9 {
 
 	public String version() {
-		return "Java 9 version";
+		return "Modern Java";
 	}
 
 }
