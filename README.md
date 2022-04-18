@@ -113,6 +113,7 @@ Check out the [jpms](http://blog.codefx.org/tag/jpms/) tag on my blog, [this dem
 * ⑮⑫⑪ `String` [in Java 15](src/main/java/org/codefx/demo/java15/api/string/FormatString.java),
   [in Java 12](src/main/java/org/codefx/demo/java12/api/string),
   and [in Java 11](src/main/java/org/codefx/demo/java11/api/string)
+* ⑭ [`@Serial`](src/main/java/org/codefx/demo/java14/lang/serial/SerialAnnotation.java) ([Javadoc](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/io/Serial.html))
 * ⑫ [formating numbers](src/main/java/org/codefx/demo/java12/api/format/CompactFormat.java)
 * ⑫ [`Files::mismatch`](src/main/java/org/codefx/demo/java12/api/files/FilesMismatch.java)
 * ⑫ `CompletableFuture` [in Java 12](src/main/java/org/codefx/demo/java12/api/future/Recovery.java) and [in Java 9](src/main/java/org/codefx/demo/java9/api/future/CompletableAdditions.java)
