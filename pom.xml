@@ -4,7 +4,7 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.codefx.demo</groupId>
+	<groupId>dev.nipafx.demo</groupId>
 	<artifactId>java-x</artifactId>
 	<version>18.0-SNAPSHOT</version>
 
@@ -30,9 +30,15 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-base</artifactId>
+			<version>11</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-controls</artifactId>
 			<version>11</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
@@ -53,9 +59,9 @@
 					<enablePreview>true</enablePreview>
 					<compilerArgs>
 						<!-- get access to `@ReservedStackAccess` in `ReservingStackAreas` -->
-						<arg>--add-exports=java.base/jdk.internal.vm.annotation=org.codefx.demo.java_x</arg>
+						<arg>--add-exports=java.base/jdk.internal.vm.annotation=dev.nipafx.demo.java_x</arg>
 						<!-- get access to `@RandomGeneratorProperties` in `Xkcd` -->
-						<arg>--add-exports=java.base/jdk.internal.util.random=org.codefx.demo.java_x</arg>
+						<arg>--add-exports=java.base/jdk.internal.util.random=dev.nipafx.demo.java_x</arg>
 					</compilerArgs>
 				</configuration>
 			</plugin>
@@ -88,7 +94,7 @@
 						<include>**/*Demo.java</include>
 					</includes>
 					<!-- make demos accessible for testing framework -->
-					<argLine>--add-opens=org.codefx.demo.java_x/org.codefx.demo.java18.jvm.javadoc=ALL-UNNAMED</argLine>
+					<argLine>--add-opens=dev.nipafx.demo.java_x/dev.nipafx.demo.java18.javadoc=ALL-UNNAMED</argLine>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -98,7 +104,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>org.codefx.demo.java10.jvm.acds.HelloAppCDS</mainClass>
+							<mainClass>dev.nipafx.demo.java10.runtime.appcds.HelloAppCDS</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
@@ -108,10 +114,10 @@
 				<version>3.3.2</version>
 				<configuration>
 					<sourcepath>src/main/java</sourcepath>
-					<subpackages>org.codefx.demo.java18.jvm.javadoc</subpackages>
+					<subpackages>dev.nipafx.demo.java18.javadoc</subpackages>
 					<additionalJOptions>
 						<!-- get access to `@RandomGeneratorProperties` in `Xkcd` -->
-						<additionalJOption>--add-exports=java.base/jdk.internal.util.random=org.codefx.demo.java_x</additionalJOption>
+						<additionalJOption>--add-exports=java.base/jdk.internal.util.random=dev.nipafx.demo.java_x</additionalJOption>
 					</additionalJOptions>
 				</configuration>
 				<executions>

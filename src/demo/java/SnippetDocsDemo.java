@@ -1,4 +1,4 @@
-package org.codefx.demo.java18.jvm.javadoc;
+package dev.nipafx.demo.java18.javadoc;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
