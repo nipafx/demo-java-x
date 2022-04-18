@@ -35,35 +35,22 @@ You can read more from me on [codefx.org](http://codefx.org), watch me blab [on 
 ## Setup
 
 This project requires at least the most recent Java release, at times even early-access builds of upcoming versions.
-You can get OpenJDK builds for both from [jdk.java.net](http://jdk.java.net), although I prefer using [SDKMAN](https://sdkman.io/).
+You can get OpenJDK builds for both from [jdk.java.net](http://jdk.java.net), although I prefer to use [SDKMAN](https://sdkman.io/).
+Most of the project can be built with Maven, i.e. `mvn package`.
 
-Most of the project can be built with Maven.
-It uses [toolchains](https://maven.apache.org/guides/mini/guide-using-toolchains.html) to configure which Java version Maven should use for compilation and packaging.
-Create/modify `toolchains.xml` in Maven's user folder (`~/.m2/` on Linux) to contain a block like the following:
+If your IDE is up to speed (which may require preview versions or additional plugins), you can execute most demos straight from there.
+Otherwise, you can always build with `mvn pckage` and then run any specific class with ...
 
-```xml
-<!-- if the file already contains a <toolchains> tag,
-     you only need the inner <toolchain> block -->
-<toolchains>
-	<toolchain>
-		<type>jdk</type>
-		<provides>
-			<version>13</version>
-			<vendor>OpenJDK</vendor>
-		</provides>
-		<configuration>
-			<jdkHome>/opt/jdk/13</jdkHome>
-		</configuration>
-	</toolchain>
-</toolchains>
+```shell
+java -p target/java-x.jar -m org.codefx.demo.java_x/$CLASS
 ```
 
-If your IDE doesn't like new syntax or APIs, you can always compile and run by hand - see `compile.sh`, `run.sh` (which expects the fully qualified name of the main class as argument) and `compile-run.sh` (conveniently combines the two - also needs the main class).
-The scripts are written for Linux but should look similar on other operating systems.
-If the appropriate Java version is not on your path, configure it in `executables.sh`.
+... where $CLASS is the class you want to execute.
+Depending on the demo you may have to add additional command line flags - they should be listed in the respective demo.
 
 For some features, you _have to_ run the `.sh` scripts in the root directory.
 If that's necessary, the feature list below mentions it.
+For that to work, you need to ensure that a `java` binary from the respective JDK version is availble on your path - again, I use SDKMAN for that.
 
 ## Java Platform Module System
 

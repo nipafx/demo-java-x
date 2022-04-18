@@ -41,6 +41,9 @@
 	</dependencies>
 
 	<build>
+
+		<finalName>java-x</finalName>
+
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -49,7 +52,7 @@
 					<!-- needed for preview language features (like pattern switches were in Java 18) -->
 					<enablePreview>true</enablePreview>
 					<compilerArgs>
-						<!-- get access to `@ReservedStackAccess` in `ReservedStackAccess` -->
+						<!-- get access to `@ReservedStackAccess` in `ReservingStackAreas` -->
 						<arg>--add-exports=java.base/jdk.internal.vm.annotation=org.codefx.demo.java_x</arg>
 						<!-- get access to `@RandomGeneratorProperties` in `Xkcd` -->
 						<arg>--add-exports=java.base/jdk.internal.util.random=org.codefx.demo.java_x</arg>

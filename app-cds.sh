@@ -8,7 +8,7 @@ mkdir app-cds
 if ! [ -e target/java-x.jar ]
 then
 	printf "Building Maven project, so JAR is available...\n"
-    mvn clean install
+    mvn clean package
 fi
 
 printf "\n--- RUN WITHOUT CDS ---\n\n"

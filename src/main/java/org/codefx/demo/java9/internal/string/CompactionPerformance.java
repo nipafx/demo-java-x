@@ -8,14 +8,14 @@ import static java.util.stream.Collectors.toList;
 public class CompactionPerformance {
 
 	// To play around with this:
-	//  (1) compile using `compile.sh`
+	//  (1) build the project with `mvn package`
 	//  (2) run with either of the following lines
 	//
 	// WITH COMPACT STRINGS (enabled by default):
-	// 	java9 -cp out org.codefx.demo.java9.internal.string.CompactionPerformance
+	// 	java -p target/java-x.jar -m org.codefx.demo.java_x/org.codefx.demo.java9.internal.string.CompactionPerformance
 	//
 	// WITHOUT COMPACT STRINGS:
-	// 	java9 -cp out -XX:-CompactStrings org.codefx.demo.java9.internal.string.CompactionPerformance
+	// 	java -p target/java-x.jar -m org.codefx.demo.java_x/org.codefx.demo.java9.internal.string.CompactionPerformance
 	//
 	// This is just for fun! Use JMH for a serious/reliable performance examination.
 

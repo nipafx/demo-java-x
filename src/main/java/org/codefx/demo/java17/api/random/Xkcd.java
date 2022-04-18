@@ -12,6 +12,11 @@ import java.util.random.RandomGenerator.ArbitrarilyJumpableGenerator;
  * By using the JDK-internal annotation `@RandomGeneratorProperties` (and possibly
  * opening this package to java.base), it also works with `RandomGeneratorFactory`,
  * but the integration mechanism isn't meant for public use.
+ *
+ * Hence, the import above may lead to errors in your IDE - two choices:
+ *  - put the import and the use below in comments
+ *  - configure your IDE to add the following compiler argument:
+ *    --add-exports=java.base/jdk.internal.util.random=org.codefx.demo.java_x
  */
 
 @RandomGeneratorProperties(
