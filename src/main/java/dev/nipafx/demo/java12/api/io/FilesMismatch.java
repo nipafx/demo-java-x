@@ -1,4 +1,4 @@
-package dev.nipafx.demo.java12.api.files;
+package dev.nipafx.demo.java12.api.io;
 
 import dev.nipafx.demo.java11.api.http2.ReactivePost;
 

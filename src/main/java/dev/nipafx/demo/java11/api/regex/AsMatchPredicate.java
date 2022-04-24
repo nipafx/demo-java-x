@@ -1,9 +1,9 @@
-package dev.nipafx.demo.java11.api.predicate;
+package dev.nipafx.demo.java11.api.regex;
 
 import java.util.List;
 import java.util.regex.Pattern;
 
-public class RegExp {
+public class AsMatchPredicate {
 
 	public static void main(String[] args) {
 		var nonWordCharacter = Pattern.compile("\\W");

@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.stream.Stream;
 
+// run with:
+//     cat echo-haiku.txt | java src/main/java/dev/nipafx/demo/java11/runtime/script/Echo.java
+// plus options `--sort`, `--unique`, or `--reverse`
 public class Echo {
 
 	public static void main(String[] args) throws IOException {
