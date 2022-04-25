@@ -11,6 +11,9 @@ These are the categories:
 * [Runtime](#runtime)
 * [Internals](#internals)
 
+Circled numbers like ⑰ indicate which Java version introduced a feature or a change.
+A circled X ⓧ indicates an incubating or previewing feature that is not yet standardized - it can be experimented with but is subject to change.
+
 For a more practical approach to many of these features, including some quick code metrics, check my [_Java After Eight_ repo](https://github.com/nipafx/java-after-eight).
 You can find more from me on [nipafx.dev](https://nipafx.dev) as well as on [YouTube](https://youtube.com/nipafx) and [Twitch](https://twitch.tv/nipafx).
 To get in touch, follow me [on Twitter](https://twitter.com/nipafx) (DMs are open) or join [my Discord](https://discord.com/invite/7m9w8Td).
@@ -90,6 +93,8 @@ Check out the [j_ms](https://nipafx.dev/#tags~~j_ms) tag on my blog (for example
 
 If an API that was introduced in Java 9+ was later updated, the update is listed in the next section.
 
+* ⓧ [vector API](src/main/java/dev/nipafx/demo/java_next/api/vector)
+  ([JEP 426](https://openjdk.java.net/jeps/426))
 * ⑱ [address resolution SPI](src/main/java/dev/nipafx/demo/java18/api/ip_resolution)
   ([JEP 418](http://openjdk.java.net/jeps/418))
 * ⑰ [random generator](src/main/java/dev/nipafx/demo/java17/api/random)

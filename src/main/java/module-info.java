@@ -12,6 +12,7 @@ module dev.nipafx.demo.java_x {
 
 	requires java.desktop;
 	requires java.net.http;
+	requires jdk.incubator.vector;
 
 	provides RandomGenerator with Xkcd;
 	provides InetAddressResolverProvider with ForwardingInetAddressResolverProvider;
