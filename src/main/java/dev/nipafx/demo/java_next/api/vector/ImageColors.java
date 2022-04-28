@@ -22,6 +22,11 @@ import java.util.function.UnaryOperator;
 public class ImageColors {
 
 	private static final VectorSpecies<Byte> RGB_SPECIES = ByteVector.SPECIES_PREFERRED;
+	/**
+	 * Some color manipulations that are implemented here are easier to understand
+	 * if they compute full pixels, i.e. always three RGB bytes at a time. So we limit
+	 * the steps taken for each vector to the largest multiple of three (e.g. 30 instead of 32).
+	 */
 	private static final int RGB_STEPS = RGB_SPECIES.length() - RGB_SPECIES.length() % 3;
 
 	private static final VectorShuffle<Byte> COLOR_SHUFFLE = VectorShuffle.fromOp(RGB_SPECIES, ImageColors::rotateRgbValues);
@@ -107,16 +112,12 @@ public class ImageColors {
 	private static byte[] invertColors_vectorized(byte[] image) {
 		byte[] newImage = new byte[image.length];
 
-		// The species can be larger than the steps taken in each loop
-		// (i.e. `RGB_SPECIES.length() >= RGB_STEPS`), which creates
-		// the risk that the last iteration wants to write to an array
-		// that could contain `RGB_STEPS` more values but not
-		// `RGB_SPECIES.length()` more values. To prevent that, execute
-		// one fewer vectorized loop.
-		int loopBound = RGB_SPECIES.loopBound(image.length) - RGB_STEPS;
+		int loopBound = RGB_SPECIES.loopBound(image.length);
 		int pixel = 0;
-		// vectorized loop
-		for (; pixel < loopBound; pixel += RGB_STEPS) {
+		// vectorized loop:
+		// to invert colors, we can ignore how three color values form one pixel
+		// and advance in steps of species length
+		for (; pixel < loopBound; pixel += RGB_SPECIES.length()) {
 			var rgbValues = ByteVector.fromArray(RGB_SPECIES, image, pixel);
 			var newRgbValues = rgbValues.neg();
 			newRgbValues.intoArray(newImage, pixel);
@@ -162,10 +163,18 @@ public class ImageColors {
 	private static byte[] rotateColors_vectorized(byte[] image) {
 		byte[] newImage = new byte[image.length];
 
-		// see comment in `invertColors_vectorized`
+		// Because the loop advances in `RGB_STEPS`, not the number of lanes
+		// as intended by the vector API, the loop bound it computes can
+		// be too high.
+		// E.g. for 32 lanes and image length 64, `RGB_SPECIES.loopBound(image.length)`
+		// is 64 for the two iterations [0..31] and [32..63]. But if we only
+		// take steps of 30, the loop condition would lead to iterations [0..29],
+		// [30..59], [60..💥]. Subtracting `RGB_STEPS` prevents that.
 		int loopBound = RGB_SPECIES.loopBound(image.length) - RGB_STEPS;
 		int pixel = 0;
-		// vectorized loop
+		// vectorized loop:
+		// for rotating colors, it's helpful to always deal in color value triples
+		// (i.e. full pixels), so advance in `RGB_STEPS`
 		for (; pixel < loopBound; pixel += RGB_STEPS) {
 			var rgbValues = ByteVector.fromArray(RGB_SPECIES, image, pixel);
 			var newRgbValues = rgbValues.rearrange(COLOR_SHUFFLE);
@@ -234,10 +243,12 @@ public class ImageColors {
 		byte[] newImage = new byte[image.length];
 
 		double imageLength = image.length;
-		// see comment in `invertColors_vectorized`
+		// see comment in `rotateColors_vectorized`
 		int loopBound = RGB_SPECIES.loopBound(image.length) - RGB_STEPS;
 		int pixel = 0;
-		// vectorized loop
+		// vectorized loop:
+		// for shifting the color, it's helpful to always deal in color value triples
+		// (i.e. full pixels), so advance in `RGB_STEPS`
 		for (; pixel < loopBound; pixel += RGB_STEPS) {
 			// Deviating from the classic loop, the quotient is not computed for each pixel,
 			// but for each "pixel block" of length `RGB_STEPS`. This means the resulting image
@@ -247,9 +258,7 @@ public class ImageColors {
 			byte purpleIndex = (byte) (255 * purpleQuotient);
 
 			var rgbValues = ByteVector.fromArray(RGB_SPECIES, image, pixel);
-			var purpleRgbValues = (ByteVector) RGB_SPECIES
-					.broadcast(0)
-					.blend(purpleIndex, PURPLE_SHIFT);
+			var purpleRgbValues = ByteVector.zero(RGB_SPECIES).blend(purpleIndex, PURPLE_SHIFT);
 			var purpleMask = rgbValues.compare(VectorOperators.UNSIGNED_LT, purpleRgbValues);
 			var newRgbValues = rgbValues.blend(purpleRgbValues, purpleMask);
 
