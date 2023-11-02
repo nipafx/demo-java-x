@@ -125,6 +125,10 @@ If an API that was introduced in Java 9+ was later updated, the update is listed
 
 ## Updated APIs
 
+* ⓧ Stream gatherers: [custom gatherers](src/main/java/dev/nipafx/demo/java_next/api/gather/CustomGatherers.java)
+  (videos [1](https://www.youtube.com/watch?v=epgJm2dZTSg),
+   [2](https://www.youtube.com/watch?v=pNQ5OXMXDbY);
+   [JEP 461](https://openjdk.org/jeps/461))
 * ⑯ (server) socket channels: [Unix domain socket support](src/main/java/dev/nipafx/demo/java16/api/unix_sockets)
   ([article](https://nipafx.dev/java-unix-domain-sockets/),
    [JEP 380](https://openjdk.java.net/jeps/380))
