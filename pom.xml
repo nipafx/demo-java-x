@@ -11,8 +11,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- setting `release` doesn't work because of the `add-opens` below -->
-		<maven.compiler.source>18</maven.compiler.source>
-		<maven.compiler.target>18</maven.compiler.target>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
 	</properties>
 
 	<dependencyManagement>
@@ -20,7 +20,7 @@
 			<dependency>
 				<groupId>org.junit</groupId>
 				<artifactId>junit-bom</artifactId>
-				<version>5.8.2</version>
+				<version>5.10.0</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -31,12 +31,12 @@
 		<dependency>
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-base</artifactId>
-			<version>18</version>
+			<version>21.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-controls</artifactId>
-			<version>18</version>
+			<version>21.0.1</version>
 		</dependency>
 
 		<dependency>
@@ -53,7 +53,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.10.1</version>
+				<version>3.11.0</version>
 				<configuration>
 					<!-- needed for preview language features (like pattern switches were in Java 18) -->
 					<enablePreview>true</enablePreview>
@@ -69,7 +69,7 @@
 				<!-- add the demo folder to the sources, so it gets compiled and tested -->
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>3.3.0</version>
+				<version>3.4.0</version>
 				<executions>
 					<execution>
 						<id>add-test-source</id>
@@ -87,7 +87,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.0.0-M5</version>
+				<version>3.2.1</version>
 				<configuration>
 					<includes>
 						<!-- execute files ending in `Demo` as tests -->
@@ -99,7 +99,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.2.2</version>
+				<version>3.3.0</version>
 				<configuration>
 					<archive>
 						<manifest>
@@ -111,7 +111,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>3.3.2</version>
+				<version>3.6.0</version>
 				<configuration>
 					<sourcepath>src/main/java</sourcepath>
 					<subpackages>dev.nipafx.demo.java18.javadoc</subpackages>
@@ -132,7 +132,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.3.0</version>
+				<version>3.6.1</version>
 				<executions>
 					<execution>
 						<id>copy-installed</id>
